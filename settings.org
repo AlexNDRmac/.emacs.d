@@ -1,0 +1,43 @@
+#+TITLE: Emacs configuration
+
+* Theme
+
+** Doom theme
+
+#+begin_src emacs-lisp
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
+#+end_src
+
+* Basic Emacs Settings | Overrides
+
+** Disable Ring Bell
+
+#+begin_src emacs-lisp
+(setq ring-bell-function 'ignore)
+#+end_src
+
+** Frame Title
+
+#+begin_src emacs-lisp
+(setq frame-title-format
+      '("" invocation-name " Emacs - "
+        (:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
+#+end_src
+
+* Version Control System
+
+** Magit
+
+#+begin_src emacs-lisp
+(use-package magit
+  :ensure t
+  :defer t
+  :config
+  ;; DWIM prompting when creating new branches.
+  (setq magit-branch-read-upstream-first 'fallback))
+#+end_src
