@@ -41,3 +41,35 @@
   ;; DWIM prompting when creating new branches.
   (setq magit-branch-read-upstream-first 'fallback))
 #+end_src
+
+* Packages
+
+** Editorconfig
+
+#+begin_src emacs-lisp
+(use-package editorconfig
+  :ensure t
+  :delight (editorconfig-mode " EC")
+  :hook ((prog-mode-hook text-mode-hook) . editorconfig-mode))
+#+end_src
+
+** Yaml
+
+#+begin_src emacs-lisp
+(use-package yaml-mode
+  :ensure t
+  :mode (("\\.yml\\'" . yaml-mode)
+         ("\\.yaml\\'" . yaml-mode)))
+#+end_src
+
+** Docker
+
+#+begin_src emacs-lisp
+(use-package dockerfile-mode
+  :ensure t
+  :mode  ("\\Dockerfile" . dockerfile-mode))
+
+(use-package docker-compose-mode
+  :ensure t
+  :mode ("docker-compose" . docker-compose-mode))
+#+end_src
