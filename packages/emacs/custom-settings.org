@@ -1,0 +1,25 @@
+#+TITLE: Emacs Customizations
+
+** Basic Configuration
+
+#+begin_src emacs-lisp
+;; Enable line highlight mode everywhere
+(global-hl-line-mode 1)
+
+;; Enable line highlight mode everywhere
+(global-hl-line-mode 1)
+
+;; Disable Ring Bell
+(setq ring-bell-function 'ignore)
+
+;; Frame Title
+(setq frame-title-format
+      '("" invocation-name " Emacs - "
+        (:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
+
+;; Treemacs
+(setq treemacs :variables treemacs-use-follow-mode t)
+(setq treemacs :variables treemacs-use-filewatch-mode t)
+#+end_src

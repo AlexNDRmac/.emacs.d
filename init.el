@@ -38,6 +38,6 @@
 
 ;;; Personal Layer:
 (org-babel-load-file
- (expand-file-name "settings.org" user-emacs-directory))
+  (expand-file-name "settings.org" user-emacs-directory))
 
 ;;; init.el ends here

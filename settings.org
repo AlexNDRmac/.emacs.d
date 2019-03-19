@@ -4,90 +4,38 @@
 
 #+begin_src emacs-lisp
 (org-babel-load-file
-  (expand-file-name (concat user-emacs-directory "packages/theme/doom-theme.org" ))
-)
+  (expand-file-name
+    (concat user-emacs-directory "packages/theme/doom-theme.org" )))
 #+end_src
 
 * Basic Emacs Settings | Overrides
 
-** Customization Settings
+** Custom Settings
 
-Set up the customize file to its own separate file, instead of saving
-customize settings in [[file:init.el][init.el]].
+Set up the customize file to its own separate file,
+instead of saving customize settings in [[file:init.el][init.el]].
 
 #+begin_src emacs-lisp
-(setq custom-file (concat user-etc-dir "custom.el"))
+(setq custom-file
+  (concat user-emacs-directory "custom.el"))
+
 (load custom-file t)
-#+end_src
 
-*** Basic Emacs Customization / Overrides
-
-#+begin_src emacs-lisp
-;; Enable line highlight mode everywhere
-(global-hl-line-mode 1)
-
-;; Disable Ring Bell
-(setq ring-bell-function 'ignore)
-
-;; Frame Title
-(setq frame-title-format
-      '("" invocation-name " Emacs - "
-        (:eval (if (buffer-file-name)
-                   (abbreviate-file-name (buffer-file-name))
-                 "%b"))))
+;; Custom Settings and Overrides
+(org-babel-load-file
+  (expand-file-name
+    (concat user-emacs-directory "packages/emacs/custom-settings.org" )))
 #+end_src
 
 * Version Control System
 
 ** Magit
 
-#+begin_src emacs-lisp
-(use-package magit
-  :ensure t
-  :defer t
-  :config
-  ;; DWIM prompting when creating new branches.
-  (setq magit-branch-read-upstream-first 'fallback))
-#+end_src
-
-* Packages
-
-** Editorconfig
+Magit is an interface to the version control system Git, implemented as an Emacs package. Magit aspires to be a complete Git porcelain.
 
 #+begin_src emacs-lisp
-(use-package editorconfig
-  :ensure t
-  :delight (editorconfig-mode " EC")
-  :hook ((prog-mode-hook text-mode-hook) . editorconfig-mode))
-#+end_src
-
-** Yaml
-
-#+begin_src emacs-lisp
-(use-package yaml-mode
-  :ensure t
-  :mode "\\.ya?ml\\'"
-#+end_src
-
-** Docker
-
-#+begin_src emacs-lisp
-(use-package dockerfile-mode
-  :ensure t
-  :mode  ("\\Dockerfile" . dockerfile-mode))
-
-(use-package docker-compose-mode
-  :ensure t
-  :mode ("docker-compose" . docker-compose-mode))
-#+end_src
-
-** C / C++
-
-#+begin_src emacs-lisp
-;; auto-complete source for C headers
-(require 'ac-c-headers)
-(add-hook 'c-mode-hook
-          (lambda ()
-            (add-to-list 'ac-sources 'ac-source-c-headers)
-            (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
+;; Load Magit Package and Configuration
+(org-babel-load-file
+  (expand-file-name
+    (concat user-emacs-directory "packages/magit/package.org" )))
 #+end_src

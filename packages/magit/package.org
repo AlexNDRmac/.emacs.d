@@ -1,0 +1,12 @@
+#+TITLE: Magit Package Configuration
+
+Magit is an interface to the version control system Git, implemented as an Emacs package. Magit aspires to be a complete Git porcelain.
+
+#+begin_src emacs-lisp
+(use-package magit
+  :ensure t
+  :defer t
+  :config
+  ;; DWIM prompting when creating new branches.
+  (setq magit-branch-read-upstream-first 'fallback))
+#+end_src
