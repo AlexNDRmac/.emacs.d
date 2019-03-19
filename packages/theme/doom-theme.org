@@ -1,0 +1,10 @@
+#+TITLE: Theme Configuration
+
+* Doom theme
+
+#+begin_src emacs-lisp
+(use-package doom-themes
+  :ensure t
+  :config
+  (load-theme 'doom-one t))
+#+end_src

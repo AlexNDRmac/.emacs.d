@@ -2,26 +2,34 @@
 
 * Theme
 
-** Doom theme
-
 #+begin_src emacs-lisp
-(use-package doom-themes
-  :ensure t
-  :config
-  (load-theme 'doom-one t))
+(org-babel-load-file
+  (expand-file-name (concat user-emacs-directory "packages/theme/doom-theme.org" ))
+)
 #+end_src
 
 * Basic Emacs Settings | Overrides
 
-** Disable Ring Bell
+** Customization Settings
+
+Set up the customize file to its own separate file, instead of saving
+customize settings in [[file:init.el][init.el]].
 
 #+begin_src emacs-lisp
-(setq ring-bell-function 'ignore)
+(setq custom-file (concat user-etc-dir "custom.el"))
+(load custom-file t)
 #+end_src
 
-** Frame Title
+*** Basic Emacs Customization / Overrides
 
 #+begin_src emacs-lisp
+;; Enable line highlight mode everywhere
+(global-hl-line-mode 1)
+
+;; Disable Ring Bell
+(setq ring-bell-function 'ignore)
+
+;; Frame Title
 (setq frame-title-format
       '("" invocation-name " Emacs - "
         (:eval (if (buffer-file-name)
@@ -58,7 +66,7 @@
 #+begin_src emacs-lisp
 (use-package yaml-mode
   :ensure t
-  :mode (("\\.ya?ml\\'" . yaml-mode))
+  :mode "\\.ya?ml\\'"
 #+end_src
 
 ** Docker
@@ -71,4 +79,15 @@
 (use-package docker-compose-mode
   :ensure t
   :mode ("docker-compose" . docker-compose-mode))
+#+end_src
+
+** C / C++
+
+#+begin_src emacs-lisp
+;; auto-complete source for C headers
+(require 'ac-c-headers)
+(add-hook 'c-mode-hook
+          (lambda ()
+            (add-to-list 'ac-sources 'ac-source-c-headers)
+            (add-to-list 'ac-sources 'ac-source-c-header-symbols t)))
 #+end_src
