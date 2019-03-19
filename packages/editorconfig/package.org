@@ -1,0 +1,10 @@
+#+TITLE: Editorconfig Package Configuration
+
+* Editorconfig
+
+#+begin_src emacs-lisp
+(use-package editorconfig
+  :ensure t
+  :delight (editorconfig-mode " EC")
+  :hook ((prog-mode-hook text-mode-hook) . editorconfig-mode))
+#+end_src
