@@ -58,8 +58,7 @@
 #+begin_src emacs-lisp
 (use-package yaml-mode
   :ensure t
-  :mode (("\\.yml\\'" . yaml-mode)
-         ("\\.yaml\\'" . yaml-mode)))
+  :mode (("\\.ya?ml\\'" . yaml-mode))
 #+end_src
 
 ** Docker
