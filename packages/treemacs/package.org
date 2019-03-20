@@ -1,0 +1,12 @@
+#+TITLE: Treemacs is a tree layout file explorer for Emacs
+
+[[https://github.com/Alexander-Miller/treemacs#installation][Installation]]
+
+#+begin_src emacs-lisp
+(use-package treemacs
+  :ensure t
+  :defer t)
+
+(setq treemacs :variables treemacs-use-follow-mode t)
+(setq treemacs :variables treemacs-use-filewatch-mode t)
+#+end_src

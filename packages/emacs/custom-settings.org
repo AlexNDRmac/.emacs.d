@@ -18,8 +18,4 @@
         (:eval (if (buffer-file-name)
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
-
-;; Treemacs
-(setq treemacs :variables treemacs-use-follow-mode t)
-(setq treemacs :variables treemacs-use-filewatch-mode t)
 #+end_src
