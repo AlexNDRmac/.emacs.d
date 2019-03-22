@@ -3,6 +3,10 @@
 ** Basic Configuration
 
 #+begin_src emacs-lisp
+(defvar user-cache-dir (concat user-emacs-directory ".cache/")
+  "Directory for volatile storage.
+Use this for files that change often, like cache files.")
+
 ;; Enable line highlight mode everywhere
 (global-hl-line-mode 1)
 

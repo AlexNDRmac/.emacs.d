@@ -1,0 +1,42 @@
+#+TITLE: PHP Package Configuration
+
+* PHP
+
+#+begin_src emacs-lisp
+;; Add ac-php
+(use-package ac-php
+  :ensure t
+  :after company)
+
+;; Add company-php
+(use-package company-php
+  :ensure t
+  :after ac-php
+  :config
+  (unless (executable-find "phpctags")
+    (warn "company-php: phpctags isn't installed, auto-completion will be gimped"))
+  (let ((my-cache-dir (concat user-cache-dir "ac-php/")))
+    (setq ac-php-tags-path my-cache-dir)
+    (unless (file-exists-p my-cache-dir)
+      (make-directory my-cache-dir t))))
+
+;; Add php
+(use-package php-mode
+    :ensure t
+    :after company-php
+    :mode (("\\.php[ts354]?\\'" . php-mode)
+           ("\\.inc\\'" . php-mode))
+    :requires (ac-php company-php)
+    :config
+    (add-hook 'php-mode-hook 'auto-complete-mode)
+    (add-hook 'php-mode-hook 'company-mode)
+    (add-hook 'php-mode-hook 'subword-mode)
+
+    (ac-php-remake-tags)
+    (ac-php-remake-tags-all)
+    (ac-php-core-eldoc-setup)
+    (make-local-variable 'company-backends)
+    (add-to-list 'company-backends 'company-ac-php-backend)
+    (setq-default php-mode-coding-style 'psr2)
+)
+#+end_src
