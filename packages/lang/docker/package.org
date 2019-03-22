@@ -1,0 +1,11 @@
+#+TITLE: Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image
+
+#+begin_src emacs-lisp
+(use-package dockerfile-mode
+  :ensure t
+  :mode  ("\\Dockerfile" . dockerfile-mode))
+
+(use-package docker-compose-mode
+  :ensure t
+  :mode ("docker-compose" . docker-compose-mode))
+#+end_src
