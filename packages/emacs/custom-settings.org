@@ -7,6 +7,9 @@
   "Directory for volatile storage.
 Use this for files that change often, like cache files.")
 
+;; Add Mac OS bin $PATH to Emacs directory list
+(add-to-list 'exec-path "/usr/local/bin/")
+
 ;; Enable line highlight mode everywhere
 (global-hl-line-mode 1)
 

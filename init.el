@@ -1,7 +1,19 @@
 ;;; init.el -- Initialization file. -*- lexical-binding: t; -*-
 
+;; This file is not part of GNU Emacs.
+;;
+;; License: GPLv3
+
+;;; Commentary:
+
+;; This file is used to set up the packages sources and then call
+;; an org-babel tangle in order to load a literate configuration.
+
+;;; Code:
+
 ;; Set up package
 (require 'package)
+
 (setq package-archives
       '(("org" . "http://orgmode.org/elpa/")
         ("melpa" . "http://melpa.org/packages/")
@@ -24,6 +36,7 @@
 
 ;; From use-package README
 (eval-when-compile (require 'use-package))
+
 (require 'diminish)
 (require 'bind-key)
 
