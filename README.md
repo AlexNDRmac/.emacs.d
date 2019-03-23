@@ -4,10 +4,13 @@
 <h1 align="center">GNU Emacs</h1>
 
 <p align="center">
-![GitHub](https://img.shields.io/github/license/AlexNDRmac/.emacs.d.svg)
-![GitHub top language](https://img.shields.io/github/languages/top/AlexNDRmac/.emacs.d.svg)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/AlexNDRmac/.emacs.d.svg)
-![GitHub watchers](https://img.shields.io/github/watchers/AlexNDRmac/.emacs.d.svg?style=social)
+<a href="./LICENSE"><img src="https://img.shields.io/github/license/AlexNDRmac/.emacs.d.svg" alt="Github"></a>
+<a href="https://github.com/AlexNDRmac/.emacs.d"><img src="https://img.shields.io/github/release/AlexNDRmac/.emacs.d.svg" alt="GitHub release"></a>
+<a href="https://github.com/AlexNDRmac/.emacs.d"><img src="https://img.shields.io/github/languages/code-size/AlexNDRmac/.emacs.d.svg" alt="GitHub code size in bytes"></a>
+<a href="https://github.com/AlexNDRmac/.emacs.d"><img src="https://img.shields.io/github/repo-size/AlexNDRmac/.emacs.d.svg" alt="GitHub repo size in bytes"></a>
+<a href="https://github.com/AlexNDRmac/.emacs.d"><img src="https://img.shields.io/github/last-commit/AlexNDRmac/.emacs.d.svg" alt="GitHub last commit"></a>
+<a href="https://github.com/AlexNDRmac/.emacs.d"><img src="https://img.shields.io/github/languages/top/AlexNDRmac/.emacs.d.svg" alt="GitHub top language"></a>
+<a href="https://github.com/AlexNDRmac/.emacs.d"><img src="https://img.shields.io/github/watchers/AlexNDRmac/.emacs.d.svg?style=social" alt="GitHub watchers"></a>
 </p>
 
 ## Configuration for Emacs 2.6.x
