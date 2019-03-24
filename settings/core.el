@@ -11,7 +11,16 @@
 ;;; Code:
 
 ;;; ========================================
-;;; Set up global Variables and Directories
+;;; Set up global Variables and Const
+;;; ========================================
+
+(defconst emacs-debug-mode (or (getenv "DEBUG") init-file-debug)
+  "If non-nil, all Emacs will be verbose.
+Set DEBUG=1 in the command line or use --debug-init to enable this.")
+
+
+;;; ========================================
+;;; Set up Directories
 ;;; ========================================
 
 (defvar user-emacs-dir (file-truename user-emacs-directory)
@@ -23,6 +32,10 @@ containing it, until no links are left at any level.")
 (defvar user-cache-dir (concat user-emacs-dir ".cache/")
   "Directory for volatile storage.
 Use this for files that change often, like cache files.")
+
+(defvar user-local-dir (concat user-emacs-dir ".user/")
+  "Directory for User Specific files.
+Use this directory for permanent storage or sharing.")
 
 ;; Add Mac OS bin $PATH to Emacs directory list
 (add-to-list 'exec-path "/usr/local/bin/")
@@ -61,8 +74,7 @@ Use this for files that change often, like cache files.")
 
  ;; Store all temp, cached, intermediate and very helpful files
  ;; to local common Dir
- tramp-auto-save-directory (concat user-cache-dir "tramp/")
- )
+ tramp-auto-save-directory (concat user-cache-dir "tramp/"))
 
 ;; =======================================
 ;; General Settings
