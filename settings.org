@@ -8,19 +8,6 @@
     (concat user-emacs-directory "packages/theme/doom-theme.org")))
 #+end_src
 
-* Basic Emacs Settings | Overrides
-
-** Custom Settings
-
-Set up the customize file to its own separate file,
-instead of saving customize settings in [[file:init.el][init.el]].
-
-#+begin_src emacs-lisp
-(setq custom-file
-  (concat user-emacs-directory "custom.el"))
-
-(load custom-file t)
-
 * File Manager
 
 ** Treemacs

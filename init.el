@@ -14,34 +14,15 @@
 ;; Base Configuration file used as Core Settings for Emacs
 (require 'core (concat user-emacs-directory "settings/core"))
 
-;; Set up package
-(require 'package)
+;; Set up the customize file to its own separate file,
+;; instead of saving customize settings in init.el.
+(setq custom-file (concat user-local-dir "custom.el"))
+(load custom-file t)
 
-(setq package-archives
-      '(("org" . "http://orgmode.org/elpa/")
-        ("melpa" . "http://melpa.org/packages/")
-        ("melpa-stable" . "http://stable.melpa.org/packages/")
-        ("gnu" . "https://elpa.gnu.org/packages/")))
-
-(package-initialize)
-
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;; Bootstrap use-package
-;; Install use-package if it's not already installed.
-;; use-package is used to configure the rest of the packages.
-(unless (or (package-installed-p 'use-package)
-            (package-installed-p 'diminish))
-  (package-refresh-contents)
-  (package-install 'use-package)
-  (package-install 'diminish))
-
-;; From use-package README
-(eval-when-compile (require 'use-package))
-
-(require 'diminish)
-(require 'bind-key)
+;; ===================================================
+;; Bootstrap Package
+;; ===================================================
+(require 'packages)
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system

@@ -1,9 +1,6 @@
 # Cache folders persisted to Workspace
 .cache
 
-# Autocomplete history
-ac-comphist.dat
-
 # Packages and Customizations
 settings.el
 packages/*/*.el

@@ -37,8 +37,15 @@ Use this for files that change often, like cache files.")
   "Directory for User Specific files.
 Use this directory for permanent storage or sharing.")
 
+(defvar user-settings-dir (concat user-emacs-dir "settings/")
+  "All Settings and Customizatons for Emacs should located here.
+This path also using for Bootstrap Packages.")
+
 ;; Add Mac OS bin $PATH to Emacs directory list
 (add-to-list 'exec-path "/usr/local/bin/")
+
+;; Add Settings path to Emacs directory list
+(add-to-list 'load-path user-settings-dir)
 
 
 ;;; ========================================
