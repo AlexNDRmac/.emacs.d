@@ -11,6 +11,9 @@
 
 ;;; Code:
 
+;; Base Configuration file used as Core Settings for Emacs
+(require 'core (concat user-emacs-directory "settings/core"))
+
 ;; Set up package
 (require 'package)
 
@@ -39,8 +42,6 @@
 
 (require 'diminish)
 (require 'bind-key)
-
-;;; Code:
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system

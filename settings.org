@@ -21,12 +21,6 @@ instead of saving customize settings in [[file:init.el][init.el]].
 
 (load custom-file t)
 
-;; Custom Settings and Overrides
-(org-babel-load-file
-  (expand-file-name
-    (concat user-emacs-directory "packages/emacs/custom-settings.org")))
-#+end_src
-
 * File Manager
 
 ** Treemacs
