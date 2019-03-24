@@ -27,6 +27,43 @@ Use this for files that change often, like cache files.")
 ;; Add Mac OS bin $PATH to Emacs directory list
 (add-to-list 'exec-path "/usr/local/bin/")
 
+
+;;; ========================================
+;;; Encoding
+;;; ========================================
+
+(when (fboundp 'set-charset-priority)
+  (set-charset-priority 'unicode))
+
+(prefer-coding-system 'utf-8)
+
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-selection-coding-system 'utf-8)
+
+(setq locale-coding-system 'utf-8)
+(setq-default buffer-file-coding-system 'utf-8)
+
+
+;;; ========================================
+;;; Defaults
+;;; ========================================
+(setq-default
+ ;; Debug on Error
+ debug-on-error (and (not noninteractive) emacs-debug-mode)
+
+ ;; History Settings
+ history-length 500
+ history-delete-duplicates t
+
+ ;; Do not ask for confirmationwhen opening Symlinks
+ vc-follow-symlinks t
+
+ ;; Store all temp, cached, intermediate and very helpful files
+ ;; to local common Dir
+ tramp-auto-save-directory (concat user-cache-dir "tramp/")
+ )
+
 ;; =======================================
 ;; General Settings
 ;; =======================================
