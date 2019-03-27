@@ -100,6 +100,9 @@ This path also using for Bootstrap Packages.")
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
 
+;; Startup Window size
+(add-to-list 'default-frame-alist '(height . 70))
+(add-to-list 'default-frame-alist '(width  . 120))
 
 (provide 'core)
 ;;; core.el ends here
