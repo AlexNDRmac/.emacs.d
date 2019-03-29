@@ -90,6 +90,9 @@ This path also using for Bootstrap Packages.")
 ;; Enable line highlight mode everywhere
 (global-hl-line-mode 1)
 
+;; Delete Selected Region when typing instead of adding
+(delete-selection-mode t)
+
 ;; Disable Ring Bell
 (setq ring-bell-function 'ignore)
 
