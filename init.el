@@ -20,10 +20,29 @@
 (load custom-file t)
 
 ;; ===================================================
-;; Bootstrap Package
+;; Bootstrap Packages
 ;; ===================================================
 (require 'packages)
-(require 'theme)         ; Set up Doom Theme
+
+;; ---------------------------------------------------
+;; Appearance & Theme
+;; ---------------------------------------------------
+(require 'theme)         ; Use Doom Theme
+
+;; ---------------------------------------------------
+;; Version Control System
+;; ---------------------------------------------------
+(require 'pkg-magit)     ; Use Magit is an interface for Git
+(require 'mode-git)      ; Use various git config files
+
+;; ---------------------------------------------------
+;; Languages and Frameworks
+;; ---------------------------------------------------
+;; (require 'lang-php)
+;; (require 'lang-cpp)
+;; (require 'lang-csharp)
+;; (require 'lang-lisp)
+;; (require 'lang-java)
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system

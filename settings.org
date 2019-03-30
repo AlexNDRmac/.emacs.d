@@ -11,19 +11,6 @@
     (concat user-emacs-directory "packages/treemacs/package.org")))
 #+end_src
 
-* Version Control System
-
-** Magit
-
-Magit is an interface to the version control system Git, implemented as an Emacs package. Magit aspires to be a complete Git porcelain.
-
-#+begin_src emacs-lisp
-;; Load Magit Package and Configuration
-(org-babel-load-file
-  (expand-file-name
-    (concat user-emacs-directory "packages/magit/package.org")))
-#+end_src
-
 * CodeStyle and Formatting
 
 ** EditorConfig
