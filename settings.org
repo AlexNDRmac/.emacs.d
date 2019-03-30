@@ -1,13 +1,5 @@
 #+TITLE: Emacs configuration
 
-* Theme
-
-#+begin_src emacs-lisp
-(org-babel-load-file
-  (expand-file-name
-    (concat user-emacs-directory "packages/theme/doom-theme.org")))
-#+end_src
-
 * File Manager
 
 ** Treemacs

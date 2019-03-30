@@ -6,7 +6,7 @@
 
 ;;; Commentary:
 
-;; This file is used to Set up and confugure Main settings for Emacs
+;; This file is used to Set up and configure Main settings for Emacs
 
 ;;; Code:
 
@@ -46,6 +46,11 @@ This path also using for Bootstrap Packages.")
 
 ;; Add Settings path to Emacs directory list
 (add-to-list 'load-path user-settings-dir)
+
+;; Add nested Settings groups to the load path
+(dolist (settings-group (directory-files user-settings-dir t "\\w+"))
+  (when (file-directory-p settings-group)
+    (add-to-list 'load-path settings-group)))
 
 
 ;;; ========================================
