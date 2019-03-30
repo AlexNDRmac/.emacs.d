@@ -28,6 +28,7 @@
 ;; Appearance & Theme
 ;; ---------------------------------------------------
 (require 'theme)         ; Use Doom Theme
+(require 'editor)        ; Add .edotorconfig
 
 ;; ---------------------------------------------------
 ;; Version Control System
