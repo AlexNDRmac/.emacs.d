@@ -26,7 +26,7 @@
 
 ;; Load Magit Package
 (use-package magit
-  :after (transient)
+  :after transient
   :defer t
   :config
   ;; DWIM prompting when creating new branches.

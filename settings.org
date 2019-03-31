@@ -2,15 +2,6 @@
 
 * Languages | Highlights and Autocomplete
 
-** Autocomlete
-
-#+begin_src emacs-lisp
-;; Company Auto Complete
-(org-babel-load-file
-  (expand-file-name
-    (concat user-emacs-directory "packages/company/package.org")))
-#+end_src
-
 ** PHP
 
 #+begin_src emacs-lisp
