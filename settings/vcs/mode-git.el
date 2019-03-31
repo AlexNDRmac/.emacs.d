@@ -34,19 +34,19 @@
 
 ;; Support .gitignore files
 (use-package gitignore-mode
-  :mode (("\\.gitignore\\'"           . gitignore-mode)
-         ("\\.dockerignore\\'"        . gitignore-mode)))
+  :mode "\\.gitignore\\'"
+  :mode "\\.dockerignore\\'")
 
 ;; Support .gitattributes files
 (use-package gitattributes-mode
-  :mode (("\\.gitattributes\\'"       . gitattributes-mode)
-         ("\\.git/info/attributes\\'" . gitattributes-mode)))
+    :mode "\\.gitattributes\\'"
+    :mode "\\.git/info/attributes\\'")
 
 ;; Support .gitconfig files
 (use-package gitconfig-mode
-  :mode (("\\.gitconfig\\'"           . gitconfig-mode)
-         ("\\.git/config\\'"          . gitconfig-mode)
-         ("\\.gitmodules\\'"          . gitconfig-mode)))
+  :mode "\\.gitconfig\\'"
+  :mode "\\.git/config\\'"
+  :mode "\\.gitmodules\\'")
 
 (provide 'mode-git)
 ;;; mode-git.el ends here

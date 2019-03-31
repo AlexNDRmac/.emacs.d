@@ -1,16 +1,5 @@
 #+TITLE: Emacs configuration
 
-* File Manager
-
-** Treemacs
-
-#+begin_src emacs-lisp
-;; Load Treemacs Package and Configuration
-(org-babel-load-file
-  (expand-file-name
-    (concat user-emacs-directory "packages/treemacs/package.org")))
-#+end_src
-
 * Languages | Highlights and Autocomplete
 
 ** Autocomlete

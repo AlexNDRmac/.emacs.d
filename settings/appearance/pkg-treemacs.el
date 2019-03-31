@@ -1,10 +1,18 @@
-#+TITLE: Treemacs is a tree layout file explorer for Emacs
+;;; pkg-treemacs.el --- Treemacs is a tree layout file explorer for Emacs. -*- lexical-binding: t; -*-
 
-[[https://github.com/Alexander-Miller/treemacs#installation][Installation]]
+;; This file is not part of GNU Emacs.
+;;
+;; License: GPLv3
 
-#+begin_src emacs-lisp
+;;; Commentary:
+
+;; This file is used to Set up and configure Treemacs for Emacs
+;; @see https://github.com/Alexander-Miller/treemacs
+
+;;; Code:
+
+;; use Treemacs
 (use-package treemacs
-  :ensure t
   :defer t
   :init
   (with-eval-after-load 'winum
@@ -41,7 +49,7 @@
           treemacs-tag-follow-cleanup            t
           treemacs-tag-follow-delay              1.5
           treemacs-width                         35)
-    
+
     ;; The default width and height of the icons is 22 pixels.
     ;; Use a Hi-DPI display!
     ;; (treemacs-resize-icons 44)
@@ -73,4 +81,7 @@
 
 (setq treemacs :variables treemacs-use-follow-mode t)
 (setq treemacs :variables treemacs-use-filewatch-mode t)
-#+end_src
+
+(provide 'pkg-treemacs)
+
+;;; pkg-treemacs.el ends here

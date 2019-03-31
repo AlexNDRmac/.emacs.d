@@ -30,7 +30,10 @@
   :defer t
   :config
   ;; DWIM prompting when creating new branches.
-  (setq magit-branch-read-upstream-first 'fallback))
+    (setq magit-branch-read-upstream-first 'fallback))
+
+(use-package magit-popup
+  :demand t)
 
 (provide 'pkg-magit)
 

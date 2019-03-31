@@ -1,7 +1,6 @@
-(setq yaml-packages '(
-    company
-    flycheck
-    yaml-mode))
+(setq yaml-packages '(company 
+                      flycheck
+                      yaml-mode))
 
 (use-package yaml-mode
   :ensure t

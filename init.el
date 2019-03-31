@@ -28,7 +28,8 @@
 ;; Appearance & Theme
 ;; ---------------------------------------------------
 (require 'theme)         ; Use Doom Theme
-(require 'editor)        ; Add .edotorconfig
+(require 'editor)        ; Add .editorconfig
+(require 'pkg-treemacs)  ; Use Treemacs file explorer
 
 ;; ---------------------------------------------------
 ;; Version Control System
