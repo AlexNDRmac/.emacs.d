@@ -15,15 +15,15 @@
 
 ;; use Company
 (use-package company
-  :ensure t
+    :custom
+    (company-tooltip-limit 20)
+    (company-idle-delay .15)
+    (company-echo-delay 0)
 
-  :config
-  (setq company-tooltip-limit 20)
-  (setq company-idle-delay .15)
-  (setq company-echo-delay 0)
-  (setq company-begin-commands '(self-insert-command))
+    :config
+    (setq company-begin-commands '(self-insert-command))
 
-  (define-key company-active-map (kbd "C-n") #'company-select-next)
+    (define-key company-active-map (kbd "C-n") #'company-select-next)
     (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 (provide 'pkg-company)
