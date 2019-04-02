@@ -41,7 +41,7 @@
 ;; ---------------------------------------------------
 ;; Languages and Frameworks
 ;; ---------------------------------------------------
-;; (require 'lang-php)
+(require 'lang-php)      ; use PHP mode
 ;; (require 'lang-cpp)
 ;; (require 'lang-csharp)
 ;; (require 'lang-lisp)
@@ -55,7 +55,7 @@
   (tooltip-mode -1))
 
 ;;; Personal Layer:
-(org-babel-load-file
-  (expand-file-name "settings.org" user-emacs-directory))
+;; (org-babel-load-file
+;;   (expand-file-name "settings.org" user-emacs-directory))
 
 ;;; init.el ends here
