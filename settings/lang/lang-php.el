@@ -21,9 +21,6 @@
              ;; Enable auto-complete-mode
              (auto-complete-mode t)
 
-             (require 'ac-php)
-               (setq ac-sources '(ac-source-php))
-
                ;; Enable company-mode
              (require 'company-php)
                (company-mode t)

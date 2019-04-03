@@ -15,6 +15,9 @@
     :config
     (load-theme 'atom-one-dark t))
 
+;; Use thin cursor instead of as fat as sausadge
+(setq-default cursor-type 'bar)
+
 (provide 'theme)
 
 ;;; theme.el ends here

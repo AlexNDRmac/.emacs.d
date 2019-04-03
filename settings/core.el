@@ -92,12 +92,6 @@ This path also using for Bootstrap Packages.")
 ;; General Settings
 ;; =======================================
 
-;; Enable line highlight mode everywhere
-(global-hl-line-mode 1)
-
-;; Delete Selected Region when typing instead of adding
-(delete-selection-mode t)
-
 ;; Disable Ring Bell
 (setq ring-bell-function 'ignore)
 
@@ -111,6 +105,13 @@ This path also using for Bootstrap Packages.")
 ;; Startup Window size
 (add-to-list 'default-frame-alist '(height . 70))
 (add-to-list 'default-frame-alist '(width  . 120))
+
+;; Inhibit startup/splash screen
+(setq inhibit-splash-screen   t)
+(setq inhibit-startup-message t)
+
+;; Set bash as default shell
+(setq shell-file-name "/bin/bash")
 
 (provide 'core)
 ;;; core.el ends here
