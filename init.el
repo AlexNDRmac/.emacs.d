@@ -31,6 +31,7 @@
 (require 'editor)        ; Add .editorconfig
 (require 'pkg-treemacs)  ; Use Treemacs file explorer
 (require 'pkg-company)   ; Use Company for autocompele everything
+(require 'pkg-flycheck)  ; Use Flycheck for spell checking
 
 ;; ---------------------------------------------------
 ;; Version Control System
