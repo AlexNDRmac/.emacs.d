@@ -36,7 +36,11 @@
 
              ;; Return back (optional)
              (define-key php-mode-map (kbd "C-t")
-               'ac-php-location-stack-back)))
+                 'ac-php-location-stack-back))
+           ;; PSR2
+           'php-enable-psr2-coding-style
+    )
+
 
 (provide 'lang-php)
 

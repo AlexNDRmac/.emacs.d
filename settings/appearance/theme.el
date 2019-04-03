@@ -10,10 +10,10 @@
 
 ;;; Code:
 
-;; use Doom Theme
-(use-package doom-themes
-  :config
-  (load-theme 'doom-one t))
+;; atom-one-dark-theme
+(use-package atom-one-dark-theme
+    :config
+    (load-theme 'atom-one-dark t))
 
 (provide 'theme)
 
