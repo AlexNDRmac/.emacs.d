@@ -15,13 +15,13 @@
     (global-git-gutter-mode +1)
     (custom-set-variables
         '(git-gutter:update-interval 2)
-        '(git-gutter:modified-sign   " ")
-        '(git-gutter:added-sign      "⎪")
-        '(git-gutter:deleted-sign    "⎪")
+        '(git-gutter:modified-sign   "┃")
+        '(git-gutter:added-sign      "┃")
+        '(git-gutter:deleted-sign    "┃")
         '(git-gutter:hide-gutter     nil)
       ))
 
-(set-face-background 'git-gutter:modified "DeepSkyBlue3") ;; background color
+(set-face-foreground 'git-gutter:modified "DeepSkyBlue3") ;; background color
 (set-face-foreground 'git-gutter:added "SeaGreen4")
 (set-face-foreground 'git-gutter:deleted "IndianRed3")
 

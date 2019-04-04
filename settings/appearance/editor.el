@@ -16,9 +16,9 @@
   (editorconfig-mode 1))
 
 
-;; ==========================================
+;; ===================================================
 ;; Editor / Selected region
-;; ==========================================
+;; ===================================================
 
 ;; move line up
 (defun move-line-up ()
@@ -48,13 +48,37 @@
 (global-unset-key (kbd "C-x C-d"))
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
 
-;; Enable line highlight mode everywhere
-(global-hl-line-mode 1)
+;; ====================================================
+;; Visual appearance
+;; ====================================================
 
 ;; Delete Selected Region when typing instead of adding
 (delete-selection-mode t)
 
+;; Show Line Numbers
+(setq-default display-line-numbers-type 'visual
+              display-line-numbers-current-absolute t
+              display-line-numbers-width            4
+              display-line-numbers-widen            t)
+
+(add-hook 'conf-mode-hook #'display-line-numbers-mode)
+(add-hook 'text-mode-hook #'display-line-numbers-mode)
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+
+;; Show Column/Line Number in `modeline` ex.: (55,20)
+(column-number-mode t)
+(line-number-mode t)
+
+;; Enable line highlight mode everywhere
+(global-hl-line-mode 1)
+
+
+;; Highlight parentness when point matching symbol
+(show-paren-mode 1)
+
 ;; ====================================================
+
+(add-to-list 'initial-frame-alist '(font . "Menlo-12"))
 
 (provide 'editor)
 
