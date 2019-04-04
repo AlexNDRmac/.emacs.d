@@ -32,6 +32,9 @@
   ;; DWIM prompting when creating new branches.
     (setq magit-branch-read-upstream-first 'fallback))
 
+;; Update git-gutter state after Stage/Unstage, etc.
+(add-hook 'magit-post-refresh-hook #'git-gutter:update-all-windows)
+
 (use-package magit-popup
   :demand t)
 
