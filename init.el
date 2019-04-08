@@ -55,8 +55,4 @@
   (scroll-bar-mode -1)
   (tooltip-mode -1))
 
-;;; Personal Layer:
-;; (org-babel-load-file
-;;   (expand-file-name "settings.org" user-emacs-directory))
-
 ;;; init.el ends here
