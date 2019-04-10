@@ -49,6 +49,8 @@
 ;; (require 'lang-java)
 (require 'lang-yaml)     ; highlight YML files
 
+(require 'fw-php)        ; use Tools for any PHP framewors
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system
   (menu-bar-mode -1)

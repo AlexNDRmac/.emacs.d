@@ -56,7 +56,6 @@
            'php-enable-psr2-coding-style
     )
 
-
 (provide 'lang-php)
 
 ;;; lang-php.el ends here
