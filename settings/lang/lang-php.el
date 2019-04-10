@@ -11,6 +11,9 @@
 ;; @see https://github.com/emacs-php/php-mode
 
 ;;; Code:
+
+;; company completion source for php
+;; @see `https://github.com/xcwen/ac-php'
 (use-package company-php
   :after company
   :config
