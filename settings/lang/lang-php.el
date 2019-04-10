@@ -11,10 +11,21 @@
 ;; @see https://github.com/emacs-php/php-mode
 
 ;;; Code:
+(use-package company-php
+  :after company
+  :config
+  (unless (executable-find "phpctags")
+    (warn "company-php: phpctags isn't installed, auto-completion will be gimped"))
+  (let ((my-cache-dir (concat user-cache-dir "ac-php/")))
+    (setq ac-php-tags-path my-cache-dir)
+    (unless (file-exists-p my-cache-dir)
+      (make-directory my-cache-dir t))))
 
 ;; use PHP mode
 (use-package php-mode
-    :mode "\\.php[ts354]?\\'")
+    :after company-php
+    :mode "\\.php[ts354]?\\'"
+    :mode "\\.inc\\'")
 
 (add-hook 'php-mode-hook
           '(lambda ()
