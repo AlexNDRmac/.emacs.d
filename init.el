@@ -27,7 +27,7 @@
 ;; ---------------------------------------------------
 ;; Appearance & Theme
 ;; ---------------------------------------------------
-(require 'theme)         ; Use Doom Theme
+(require 'theme)         ; Use Atom One Dark Theme
 (require 'editor)        ; Add .editorconfig
 (require 'pkg-neotree)   ; Use Neotree file explorer
 (require 'pkg-company)   ; Use Company for autocompele everything
@@ -47,6 +47,7 @@
 ;; (require 'lang-csharp)
 ;; (require 'lang-lisp)
 ;; (require 'lang-java)
+(require 'lang-yaml)     ; highlight YML files
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system
