@@ -45,7 +45,7 @@
 (require 'lang-php)      ; use PHP mode
 ;; (require 'lang-cpp)
 ;; (require 'lang-csharp)
-;; (require 'lang-lisp)
+(require 'lang-lisp)     ; use Lisp mode
 ;; (require 'lang-java)
 (require 'lang-yaml)     ; highlight YML files
 
