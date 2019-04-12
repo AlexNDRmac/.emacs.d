@@ -72,9 +72,18 @@
 ;; Enable line highlight mode everywhere
 (global-hl-line-mode 1)
 
-
 ;; Highlight parentness when point matching symbol
 (show-paren-mode 1)
+
+;; Highlight guides
+(use-package highlight-indent-guides
+  :diminish
+  :hook
+  ((prog-mode yaml-mode) . highlight-indent-guides-mode)
+  :custom
+  (highlight-indent-guides-auto-enabled t)
+  (highlight-indent-guides-responsive t)
+  (highlight-indent-guides-method 'character))
 
 ;; ====================================================
 ;; Behavior setiings 
