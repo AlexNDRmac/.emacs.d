@@ -92,7 +92,11 @@ This path also using for Bootstrap Packages.")
 ;; General Settings
 ;; =======================================
 
-;; Disable Ring Bell
+;; Quiet Startup
+(setq inhibit-startup-screen t)
+(setq inhibit-startup-message t)
+(setq inhibit-startup-echo-area-message t)
+(setq initial-scratch-message nil)
 (setq ring-bell-function 'ignore)
 
 ;; Frame Title
@@ -105,10 +109,6 @@ This path also using for Bootstrap Packages.")
 ;; Startup Window size
 (add-to-list 'default-frame-alist '(height . 70))
 (add-to-list 'default-frame-alist '(width  . 120))
-
-;; Inhibit startup/splash screen
-(setq inhibit-splash-screen   t)
-(setq inhibit-startup-message t)
 
 ;; Set bash as default shell
 (setq shell-file-name "/bin/bash")
