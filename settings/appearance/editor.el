@@ -77,6 +77,14 @@
 (show-paren-mode 1)
 
 ;; ====================================================
+;; Behavior setiings 
+;; ====================================================
+(setq auto-save-default nil)          ; Disable auto save
+(setq delete-by-moving-to-trash t)    ; Deleting files go to OS's trash folder
+(setq make-backup-files nil)          ; Forbide to make backup files
+(setq auto-save-default nil)          ; Disable auto save
+
+;; ====================================================
 
 (add-to-list 'initial-frame-alist '(font . "Menlo-12"))
 
