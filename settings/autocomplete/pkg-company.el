@@ -20,9 +20,10 @@
     (progn
         (setq
             company-tooltip-align-annotations t
-            company-tooltip-limit 20
+            company-tooltip-limit 9
             company-echo-delay 0
             company-idle-delay .15
+            company-minimum-prefix-length 3
             company-show-numbers t
             )))
 

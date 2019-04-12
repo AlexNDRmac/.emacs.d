@@ -12,16 +12,18 @@
 
 ;; Define modes for Autocomplete
 (defconst my|lisp-modes
-  '(emacs-lisp-mode-hook lisp-interaction-mode-hook)
+  '(emacs-lisp-mode-hook
+    lisp-interaction-mode-hook
+    ielm-mode-hook)
   "Enable Autocomplete for these modes.")
 
 ;; provides Lisp mode.
 (use-package elisp-mode
-  ;; built-in package, do not ensure loading  
+  ;; built-in package, do not ensure loading
   :ensure nil
   :init
   (dolist (hook my|lisp-modes)
-    (add-hook hook #'company-mode))
+	    (add-hook hook #'company-mode))
   :bind
   (:map emacs-lisp-mode-map
         ("C-c C-b" . #'eval-buffer)))
