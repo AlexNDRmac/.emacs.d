@@ -84,6 +84,12 @@
 (setq make-backup-files nil)          ; Forbide to make backup files
 (setq auto-save-default nil)          ; Disable auto save
 
+;; Automatically reload files was modified by external program
+(use-package autorevert
+  :ensure nil
+  :diminish
+  :hook (after-init . global-auto-revert-mode))
+
 ;; ====================================================
 
 (add-to-list 'initial-frame-alist '(font . "Menlo-12"))
