@@ -99,10 +99,25 @@
   :diminish
   :hook (after-init . global-auto-revert-mode))
 
+;;; ====================================================
+;; Font setiings 
 ;; ====================================================
 
 (add-to-list 'initial-frame-alist '(font . "Menlo-12"))
 
-(provide 'editor)
+;; nice fonts in OS X
+(setq mac-allow-anti-aliasing t)
 
+;; ====================================================
+;; Selection setiings 
+;; ====================================================
+
+;; Use Multiple Cursor for Selection mode
+(use-package multiple-cursors
+  :ensure t
+  :bind (("M-." . mc/mark-next-like-this)
+         ("M-," . mc/unmark-next-like-this)
+         ("C-M-<mouse-1>" . mc/add-cursor-on-click)))
+
+(provide 'editor)
 ;;; editor.el ends here
