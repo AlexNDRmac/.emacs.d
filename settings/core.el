@@ -57,6 +57,7 @@ This path also using for Bootstrap Packages.")
 ;;; Encoding
 ;;; ========================================
 
+;; Use UTF-8
 (when (fboundp 'set-charset-priority)
   (set-charset-priority 'unicode))
 
@@ -69,10 +70,10 @@ This path also using for Bootstrap Packages.")
 (setq locale-coding-system 'utf-8)
 (setq-default buffer-file-coding-system 'utf-8)
 
+;;; ========================================
+;;; Better Defaults
+;;; ========================================
 
-;;; ========================================
-;;; Defaults
-;;; ========================================
 (setq-default
  ;; Debug on Error
  debug-on-error (and (not noninteractive) emacs-debug-mode)
@@ -109,6 +110,9 @@ This path also using for Bootstrap Packages.")
 ;; Startup Window size
 (add-to-list 'default-frame-alist '(height . 70))
 (add-to-list 'default-frame-alist '(width  . 120))
+
+;; Use `y` on `n` for confirmation, instead `yes` / `no`
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Set bash as default shell
 (setq shell-file-name "/bin/bash")

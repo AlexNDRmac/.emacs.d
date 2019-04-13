@@ -18,6 +18,9 @@
 ;; Use thin cursor instead of as fat as sausadge
 (setq-default cursor-type 'bar)
 
+;; Add more air to line spacing everywhere
+(setq-default line-spacing 4)
+
 (provide 'theme)
 
 ;;; theme.el ends here
