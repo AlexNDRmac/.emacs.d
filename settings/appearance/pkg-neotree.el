@@ -18,7 +18,12 @@
         projectile-switch-project-action 'neotree-projectile-action
         neo-window-width 40
         neo-show-hidden-files t
-        neo-smart-open t))
+        neo-smart-open t
+        ;; Show information with a highlighting by color for file/directory name.
+        neo-vc-integration '(face)
+        neo-vc-edited-face '(:foreground "#E2C08D")    ; Light yellew
+        neo-vc-added-face  '(:foreground "SeaGreen4")  ; Light green
+        ))
 
 (global-set-key [f8] 'neotree-toggle)
 
