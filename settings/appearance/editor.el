@@ -38,6 +38,11 @@
 (global-unset-key (kbd "C-x C-d"))
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
 
+;; Easily comment lines/blocks
+(use-package evil-commentary
+  :config
+  (evil-commentary-mode))
+
 ;; ====================================================
 ;; Visual appearance
 ;; ====================================================
