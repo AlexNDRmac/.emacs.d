@@ -39,6 +39,7 @@
 ;; ---------------------------------------------------
 (require 'pkg-magit)     ; Use Magit is an interface for Git
 (require 'mode-git)      ; Use various git config files
+(require 'pkg-projects)  ; Use Projects for VCS folders
 
 ;; ---------------------------------------------------
 ;; Languages and Frameworks
