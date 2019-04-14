@@ -35,24 +35,27 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous)
   (define-key company-active-map (kbd "SPC") #'company-abort))
 
-;; Use Help
-(use-package company-quickhelp
+;; Show Help modals with Company-Bix
+(use-package company-box
   :if (display-graphic-p)
-  :commands company-quickhelp-manual-begin
-  :init
-  (progn
-    (use-package pos-tip
-      :defer t
-      :pin melpa)
+  :after all-the-icons
+  :diminish
+  :hook (company-mode . company-box-mode)
+  :config
+  (setq company-box-show-single-candidate t
+        company-box-backends-colors nil
+        company-box-max-candidates 50
+        company-box-icons-alist 'company-box-icons-all-the-icons
 
-    (with-eval-after-load 'company
-      (setq company-frontends
-            (delq 'company-echo-metadata-frontend company-frontends)
-            company-quickhelp-use-propertized-text t
-            company-quickhelp-max-lines 10
-            company-quickhelp-delay 0.3)
-      (company-quickhelp-mode)
-    )))
+        company-box-icons-elisp
+        (list
+         (concat (all-the-icons-material "functions") " ")
+         (concat (all-the-icons-material "check_circle") " ")
+         (concat (all-the-icons-material "stars") " ")
+         (concat (all-the-icons-material "format_paint") " "))
+
+        company-box-icons-unknown
+        (concat (all-the-icons-material "find_in_page") " ")))
 
 (provide 'pkg-company)
 
