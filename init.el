@@ -52,6 +52,11 @@
 
 (require 'fw-php)        ; use Tools for any PHP framewors
 
+;; ---------------------------------------------------
+;; Tools
+;; ---------------------------------------------------
+(require 'docker-integration)  ; provide support for Docker
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system
   (menu-bar-mode -1)

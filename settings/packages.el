@@ -24,6 +24,11 @@
         ("melpa-stable" . "http://stable.melpa.org/packages/")
         ("gnu"          . "https://elpa.gnu.org/packages/")))
 
+;; Priorities. Default priority is 0.
+(setq package-archive-priorities
+      '(("melpa-stable" . 10)
+        ("melpa" . 20)))
+
 ;; Init Package Manager
 (package-initialize)
 
