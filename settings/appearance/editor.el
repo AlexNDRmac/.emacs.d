@@ -20,20 +20,10 @@
 ;; Editor / Selected region
 ;; ===================================================
 
-;; move line up
-(defun move-line-up ()
-    (interactive)
-    (transpose-lines 1)
-    (previous-line 2))
-(global-set-key [M-S-up] 'move-line-up)
-
-;; move line down
-(defun move-line-down ()
-    (interactive)
-    (next-line 1)
-    (transpose-lines 1)
-    (previous-line 1))
-(global-set-key [M-S-down] 'move-line-down)
+;; Easily move text up and down
+;; @see https://github.com/emacsfodder/move-text
+(use-package move-text)
+(move-text-default-bindings)
 
 ;; duplicate line
 (defun duplicate-line()
