@@ -57,6 +57,7 @@
 ;; Tools
 ;; ---------------------------------------------------
 (require 'docker-integration)  ; provide support for Docker
+(require 'snippets)            ; provide Snippets support
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when window-system
