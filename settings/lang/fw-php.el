@@ -10,6 +10,15 @@
 
 ;;; Code:
 
+(require rx)
+
+;; declare "^use" as begining of Imports
+(defconst fw-php--imports-start-point
+  (rx (group (and bol "use"))))
+
+(defconst fw-php--imports-end-point
+  (rx (or (and bol "use") (and bol (* space) eol))))
+
 ;; Optimize php import functions
 
 ;;;###autoload
