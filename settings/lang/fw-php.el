@@ -25,7 +25,8 @@
 (defun fw-php-optimize-imports-region (begin end)
   "Optimize PHP imports from region BEGIN to END points."
   (interactive "r")
-  ;; code
+    ;; code
+    (sort-lines nil begin end)
 )
 
 ;;;###autoload

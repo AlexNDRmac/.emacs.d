@@ -7,8 +7,8 @@
 ;;; Commentary:
 
 ;; This file is used to Set up and configure Version Control System for Emacs
-;; Magit is an interface to the version control system Git,
-;; implemented as an Emacs package. Magit aspires to be a complete Git porcelain.
+;; Magit is an interface to the version control system Git, implemented as an Emacs package.
+;; Magit aspires to be a complete Git porcelain.
 
 ;;; Code:
 
