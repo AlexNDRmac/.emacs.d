@@ -10,6 +10,18 @@
 
 ;;; Code:
 
+;;; Naming conventions:
+;;
+;;   my-...   public variables or non-interactive functions
+;;   my--...  private anything (non-interactive), not safe for direct use
+;;   my/...   an interactive function; safe for M-x or keybinding
+;;   my//...  an interactive function for managing/maintaining GNU Emacs itself
+;;   my|...   a hook function
+;;   my*...   advising functions
+;;   ...!     a macro or function that configures GNU Emacs
+;;   =...     an interactive command that starts an app module
+;;   +...     any of the above but part of a module, e.g. `+emacs-lisp|init-hook'
+
 ;;; ========================================
 ;;; Set up global Variables and Const
 ;;; ========================================
@@ -88,6 +100,9 @@ This path also using for Bootstrap Packages.")
  ;; Store all temp, cached, intermediate and very helpful files
  ;; to local common Dir
  tramp-auto-save-directory (concat user-cache-dir "tramp/"))
+
+; make ibuffer default
+(defalias 'list-buffers 'ibuffer)
 
 ;; =======================================
 ;; General Settings
