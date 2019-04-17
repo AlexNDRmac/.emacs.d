@@ -98,13 +98,6 @@
   :diminish
   :hook (after-init . global-auto-revert-mode))
 
-;; Automatic balancing of pairs
-(use-package smartparens
-  :config
-  (progn
-    (smartparens-global-mode)
-    (show-smartparens-global-mode t)))
-
 ;;; ====================================================
 ;; Font setiings
 ;; ====================================================
