@@ -12,11 +12,19 @@
 ;;; Code:
 
 ;; Use docker
-(use-package dockerfile-mode
-  :mode "\\Dockerfile\\'")
-
-(use-package docker-compose-mode
-  :mode "docker-compose[^/]*\\.yml\\'")
+(use-package docker
+  :defer t
+  :init
+  (progn
+    (use-package docker-tramp
+      :defer t)
+    
+    (use-package dockerfile-mode
+      :mode "\\Dockerfile\\'")
+      
+    (use-package docker-compose-mode
+      :mode "docker-compose[^/]*\\.yml\\'")
+      ))
 
 (provide 'docker-integration)
 

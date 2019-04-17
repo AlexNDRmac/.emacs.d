@@ -10,7 +10,7 @@
 
 ;;; Code:
 
-(require rx)
+(require 'rx)
 
 ;; declare "^use" as begining of Imports
 (defconst fw-php--imports-start-point
