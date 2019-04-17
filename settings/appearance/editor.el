@@ -15,6 +15,10 @@
   :config
   (editorconfig-mode 1))
 
+(setq indent-tabs-mode nil)   ;; don't use tabs to indent
+
+;; Newline at end of file
+(setq require-final-newline t)
 
 ;; ===================================================
 ;; Editor / Selected region
@@ -81,7 +85,7 @@
   (highlight-indent-guides-method 'character))
 
 ;; ====================================================
-;; Behavior setiings 
+;; Behavior settings
 ;; ====================================================
 (setq auto-save-default nil)          ; Disable auto save
 (setq delete-by-moving-to-trash t)    ; Deleting files go to OS's trash folder
@@ -102,7 +106,7 @@
     (show-smartparens-global-mode t)))
 
 ;;; ====================================================
-;; Font setiings 
+;; Font setiings
 ;; ====================================================
 
 (add-to-list 'initial-frame-alist '(font . "Menlo-12"))
@@ -111,7 +115,7 @@
 (setq mac-allow-anti-aliasing t)
 
 ;; ====================================================
-;; Selection setiings 
+;; Selection setiings
 ;; ====================================================
 
 ;; Use Multiple Cursor for Selection mode
