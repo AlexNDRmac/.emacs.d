@@ -45,6 +45,7 @@
 ;; Languages and Frameworks
 ;; ---------------------------------------------------
 (require 'lang-php)      ; use PHP mode
+(require 'lang-web)      ; add support for web templates
 ;; (require 'lang-cpp)
 ;; (require 'lang-csharp)
 (require 'lang-lisp)     ; use Lisp mode
