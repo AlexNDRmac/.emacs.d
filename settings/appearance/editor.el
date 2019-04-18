@@ -55,10 +55,8 @@
 (delete-selection-mode t)
 
 ;; Show Line Numbers
-(setq-default display-line-numbers-type 'visual
-              display-line-numbers-current-absolute t
-              display-line-numbers-width            4
-              display-line-numbers-widen            t)
+(setq-default display-line-numbers-type t
+              display-line-numbers-width 4)
 
 (add-hook 'conf-mode-hook #'display-line-numbers-mode)
 (add-hook 'text-mode-hook #'display-line-numbers-mode)
