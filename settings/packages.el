@@ -15,8 +15,8 @@
 
 ;; Set Up Packages to Vendor's dir Including Emacs version
 (setq
- package--init-file-ensured t
- package-user-dir (concat user-local-dir "vendor/" emacs-version "/elpa"))
+    package--init-file-ensured t
+    package-user-dir (concat user-local-dir "vendor/" emacs-version "/elpa"))
 
 (setq package-archives
       '(("org"          . "http://orgmode.org/elpa/")

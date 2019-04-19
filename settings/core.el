@@ -87,19 +87,19 @@ This path also using for Bootstrap Packages.")
 ;;; ========================================
 
 (setq-default
- ;; Debug on Error
- debug-on-error (and (not noninteractive) emacs-debug-mode)
+    ;; Debug on Error
+    debug-on-error (and (not noninteractive) emacs-debug-mode)
 
- ;; History Settings
- history-length 500
- history-delete-duplicates t
+    ;; History Settings
+    history-length 500
+    history-delete-duplicates t
 
- ;; Do not ask for confirmationwhen opening Symlinks
- vc-follow-symlinks t
+    ;; Do not ask for confirmationwhen opening Symlinks
+    vc-follow-symlinks t
 
- ;; Store all temp, cached, intermediate and very helpful files
- ;; to local common Dir
- tramp-auto-save-directory (concat user-cache-dir "tramp/"))
+    ;; Store all temp, cached, intermediate and very helpful files
+    ;; to local common Dir
+    tramp-auto-save-directory (concat user-cache-dir "tramp/"))
 
 ; make ibuffer default
 (defalias 'list-buffers 'ibuffer)

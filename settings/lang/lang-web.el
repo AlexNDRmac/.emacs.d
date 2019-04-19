@@ -10,23 +10,23 @@
 
 ;;; Code:
 (use-package web-mode
-    :ensure t
-    :mode (("\\.phtml\\'"      . web-mode)
-              ("\\.tpl\\'"        . web-mode)
-              ("\\.tpl\\.php\\'"  . web-mode)
-              ("\\.blade\\.php\\'" . web-mode)
-              ("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode)
-              ("\\.volt\\'"       . web-mode)
-              ("\\.twig\\'"       . web-mode)
-              ("\\.[agj]sp\\'"    . web-mode)
-              ("\\.as[cp]x\\'"    . web-mode)
-              ("\\.erb\\'"        . web-mode)
-              ("\\.djhtml\\'"     . web-mode))
-    :init
-    ;; associate an engine
-    (setq web-mode-engines-alist
-            '(("php"   . "\\.phtml\\'")
-              ("blade" . "\\.blade\\."))))
+  :ensure t
+  :mode (("\\.phtml\\'"      . web-mode)
+         ("\\.tpl\\'"        . web-mode)
+         ("\\.tpl\\.php\\'"  . web-mode)
+         ("\\.blade\\.php\\'" . web-mode)
+         ("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode)
+         ("\\.volt\\'"       . web-mode)
+         ("\\.twig\\'"       . web-mode)
+         ("\\.[agj]sp\\'"    . web-mode)
+         ("\\.as[cp]x\\'"    . web-mode)
+         ("\\.erb\\'"        . web-mode)
+         ("\\.djhtml\\'"     . web-mode))
+  :init
+  ;; associate an engine
+  (setq web-mode-engines-alist
+        '(("php"   . "\\.phtml\\'")
+          ("blade" . "\\.blade\\."))))
 
 ;; Indentation Level Settings
 (setq web-mode-markup-indent-offset 4 ; Html.

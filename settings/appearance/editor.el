@@ -11,9 +11,19 @@
 ;;; Code:
 
 ;; Support `.editorconfig` files
+;; If you use global `.editorconfig` file, you should remove
+;; `indent_size` from general rule
+;; ex.:
+;;     [*]
+;;     charset                  = utf-8
+;;     end_of_line              = lf
+;;     insert_final_newline     = true
+;;     indent_style             = space
+;;     # indent_size              = 4
 (use-package editorconfig
-  :config
-  (editorconfig-mode 1))
+    :diminish editorconfig-mode
+    :config
+    (editorconfig-mode 1))
 
 (setq indent-tabs-mode nil)   ;; don't use tabs to indent
 
@@ -31,21 +41,21 @@
 
 ;; duplicate line
 (defun duplicate-line()
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (open-line 1)
-  (next-line 1)
-  (yank))
+    (interactive)
+    (move-beginning-of-line 1)
+    (kill-line)
+    (yank)
+    (open-line 1)
+    (next-line 1)
+    (yank))
 
 (global-unset-key (kbd "C-x C-d"))
 (global-set-key (kbd "C-x C-d") 'duplicate-line)
 
 ;; Easily comment lines/blocks
 (use-package evil-commentary
-  :config
-  (evil-commentary-mode))
+    :config
+    (evil-commentary-mode))
 
 ;; ====================================================
 ;; Visual appearance
