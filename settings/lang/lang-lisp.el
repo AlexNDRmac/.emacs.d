@@ -23,7 +23,7 @@
   :ensure nil
   :init
   (dolist (hook my|lisp-modes)
-	    (add-hook hook #'company-mode))
+    (add-hook hook #'company-mode))
   :bind
   (:map emacs-lisp-mode-map
         ("C-c C-b" . #'eval-buffer)))

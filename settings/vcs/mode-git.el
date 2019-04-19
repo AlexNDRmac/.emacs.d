@@ -10,16 +10,16 @@
 
 ;; It highlights changes and the type of them in opened files
 (use-package git-gutter
-    :config
-    ;; use git-gutter for files in git repository.
-    (global-git-gutter-mode +1)
-    (custom-set-variables
-        '(git-gutter:update-interval 2)
-        '(git-gutter:modified-sign   "┃")
-        '(git-gutter:added-sign      "┃")
-        '(git-gutter:deleted-sign    "┃")
-        '(git-gutter:hide-gutter     nil)
-      ))
+  :config
+  ;; use git-gutter for files in git repository.
+  (global-git-gutter-mode +1)
+  (custom-set-variables
+   '(git-gutter:update-interval 2)
+   '(git-gutter:modified-sign   "┃")
+   '(git-gutter:added-sign      "┃")
+   '(git-gutter:deleted-sign    "┃")
+   '(git-gutter:hide-gutter     nil)
+   ))
 
 (set-face-foreground 'git-gutter:modified "DeepSkyBlue3") ;; background color
 (set-face-foreground 'git-gutter:added "SeaGreen4")
@@ -48,8 +48,8 @@
 
 ;; Support .gitattributes files
 (use-package gitattributes-mode
-    :mode "\\.gitattributes\\'"
-    :mode "\\.git/info/attributes\\'")
+  :mode "\\.gitattributes\\'"
+  :mode "\\.git/info/attributes\\'")
 
 ;; Support .gitconfig files
 (use-package gitconfig-mode

@@ -15,17 +15,17 @@
 
 ;; use Company
 (use-package company
-    :defer t
-    :init
-    (progn
-        (setq
-            company-tooltip-align-annotations t
-            company-tooltip-limit 9
-            company-echo-delay 0
-            company-idle-delay .15
-            company-minimum-prefix-length 3
-            company-show-numbers t
-            )))
+  :defer t
+  :init
+  (progn
+    (setq
+     company-tooltip-align-annotations t
+     company-tooltip-limit 9
+     company-echo-delay 0
+     company-idle-delay .15
+     company-minimum-prefix-length 3
+     company-show-numbers t
+     )))
 
 ;; Bind Keys for Company
 (with-eval-after-load 'company
