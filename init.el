@@ -32,7 +32,9 @@
 (require 'workspaces)    ; Add windows/workspaces switching
 (require 'pkg-whichkey)  ; Display Key Bindings everywhere
 (require 'pkg-neotree)   ; Use Neotree file explorer
+
 (require 'pkg-company)   ; Use Company for autocompele everything
+(require 'pkg-ivy)       ; Use Ivy completition backend
 (require 'pkg-flycheck)  ; Use Flycheck for spell checking
 
 ;; ---------------------------------------------------
