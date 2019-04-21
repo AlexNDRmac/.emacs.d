@@ -1,5 +1,5 @@
 # name: use-package
-# key: up
+# key: use-package#
 # --
 (use-package ${1:package}
   :${2:config}

@@ -1,0 +1,23 @@
+# name: GNU Emacs Header
+# key: elisp-header#
+# --
+;;; `(file-name-nondirectory (buffer-file-name))` --- ${1:Short description} -*- lexical-binding: t; -*-
+;;
+;; Copyright (C) ${2:`(format-time-string "%Y")`} `user-full-name` <`user-mail-address`>
+;;${3:
+;; Author: `user-full-name` <`user-mail-address`>
+;; URL: ${4:https://github.com/}${5:AlexNDRmac}/.emacs.d
+;;}
+;; This file is not part of GNU Emacs.
+;;
+;; License: GPLv3
+
+;;; Commentary:
+
+;; $0
+
+;;; Code:
+
+(provide '${6:`(f-base (buffer-file-name))`})
+
+;;; `(f-filename (buffer-file-name))` ends here
