@@ -10,11 +10,11 @@
 
 ;;; Code:
 
-;; Winner  modeallows you easily switching back/forward between Window
+;; Winner mode allows you easily switching back/forward between Window
 (use-package winner
   :config
   (winner-mode t)
-  :bind (("M-s-<left>" . winner-undo)
+  :bind (("M-s-<left>"  . winner-undo)
          ("M-s-<right>" . winner-redo)))
 
 (provide 'workspaces)
