@@ -66,11 +66,10 @@
   "Optimize PHP imports from current buffer."
   (interactive)
   ;; code
-  (let* ((begin (fw-php--imports-start-region)))
+  (let* ((begin (fwphp--search-begin-point))
     (end (and begin (fwphp--search-end-point begin))))
   (when (and begin end)
-    (sort-lines nil begin end))
-)
+    (sort-lines nil begin end))))
 
 (provide 'fw-php)
 
