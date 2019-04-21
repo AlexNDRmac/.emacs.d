@@ -14,10 +14,12 @@
 
 ;;; Commentary:
 
-;; $0
+;; $6
 
 ;;; Code:
 
-(provide '${6:`(f-base (buffer-file-name))`})
+$0
+
+(provide '${7:`(f-base (buffer-file-name))`})
 
 ;;; `(f-filename (buffer-file-name))` ends here
