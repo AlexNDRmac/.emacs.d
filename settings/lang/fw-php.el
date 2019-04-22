@@ -27,14 +27,14 @@
   (rx (or (and bol "use") (and bol (* space) eol)))
   "Regexp used for determine END point of Import line.")
 
-(defun fwphp--search-begining-point (&optional end)
+(defun fwphp--search-imports-forward (&optional end)
   "Search first import line until reach END point."
   (save-excursion
     (goto-char (point-min))
     (and (re-search-forward fwphp--imports-begin-point-re end t)
          (match-beginning 1))))
 
-(defun fwphp--search-ending-point (begin)
+(defun fwphp--search-imports-endline (begin)
   "Search latest import line starting from BEGIN point."
   (let (end)
     ;; Lets remember cursor position
@@ -44,7 +44,7 @@
       (goto-char (line-beginning-position))
       (catch 'eof
         (while (re-search-forward fwphp--imports-end-point-re (line-end-position) t)
-          ;; is it end pointof buffer
+          ;; is it end point of buffer
           (when (eobp)
             (throw 'eof "End of file."))
           (setq end (line-end-position))
@@ -65,8 +65,8 @@
   "Optimize PHP imports from current buffer."
   (interactive)
   ;; code
-  (let* ((begin (fwphp--search-begining-point))
-         (end (and begin (fwphp--search-ending-point begin))))
+  (let* ((begin (fwphp--search-imports-forward))
+         (end (and begin (fwphp--search-imports-endline begin))))
     (when (and begin end)
       (sort-lines nil begin end))))
 
