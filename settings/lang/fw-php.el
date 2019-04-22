@@ -19,22 +19,22 @@
 (require 'rx)
 
 ;; declare "^use" as begining of Imports
-(defconst fwphp--imports-begin-point-regexp
+(defconst fwphp--imports-begin-point-re
   (rx (group (and bol "use")))
-  "REGEXP used to determine BEGIN point of Import line.")
+  "Regexp used to determine BEGIN point of Import line.")
 
-(defconst fwphp--imports-end-point-regexp
+(defconst fwphp--imports-end-point-re
   (rx (or (and bol "use") (and bol (* space) eol)))
-  "REGEXP used for determine END point of Import line.")
+  "Regexp used for determine END point of Import line.")
 
-(defun fwphp--search-begin-point (&optional end)
+(defun fwphp--search-begining-point (&optional end)
   "Search first import line until reach END point."
   (save-excursion
     (goto-char (point-min))
-    (and (re-search-forward fwphp--imports-begin-point-regexp end t)
+    (and (re-search-forward fwphp--imports-begin-point-re end t)
          (match-beginning 1))))
 
-(defun fwphp--search-end-point (begin)
+(defun fwphp--search-ending-point (begin)
   "Search latest import line starting from BEGIN point."
   (let (end)
     ;; Lets remember cursor position
@@ -43,7 +43,7 @@
       ;; move to begining of line
       (goto-char (line-beginning-position))
       (catch 'eof
-        (while (re-search-forward fwphp--imports-end-point-regexp (line-end-position) t)
+        (while (re-search-forward fwphp--imports-end-point-re (line-end-position) t)
           ;; is it end pointof buffer
           (when (eobp)
             (throw 'eof "End of file."))
@@ -58,18 +58,17 @@
   "Optimize PHP imports from region BEGIN to END points."
   (interactive "r")
     ;; code
-    (sort-lines nil begin end)
-)
+    (sort-lines nil begin end))
 
 ;;;###autoload
 (defun fw-php-optimize-imports-buffer ()
   "Optimize PHP imports from current buffer."
   (interactive)
   ;; code
-  (let* ((begin (fwphp--search-begin-point))
-    (end (and begin (fwphp--search-end-point begin))))
-  (when (and begin end)
-    (sort-lines nil begin end))))
+  (let* ((begin (fwphp--search-begining-point))
+         (end (and begin (fwphp--search-ending-point begin))))
+    (when (and begin end)
+      (sort-lines nil begin end))))
 
 (provide 'fw-php)
 
