@@ -1,7 +1,7 @@
 # Cache folders persisted to Workspace
 .cache
 
-# Packages and Customizations
-settings.el
-packages/*/*.el
-packages/*/*/*.el
+# Packages installed for development
+.cask
+
+*.elc

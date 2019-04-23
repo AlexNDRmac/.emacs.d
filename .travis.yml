@@ -1,7 +1,5 @@
 language: emacs-lisp
 
-language: emacs-lisp
-
 cache:
   apt: true
   timeout: 604800
