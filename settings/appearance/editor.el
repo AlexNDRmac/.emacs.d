@@ -83,14 +83,14 @@
 (show-paren-mode 1)
 
 ;; Highlight guides
-(use-package highlight-indent-guides
-  :diminish
-  :hook
-  ((prog-mode yaml-mode) . highlight-indent-guides-mode)
-  :custom
-  (highlight-indent-guides-auto-enabled t)
-  (highlight-indent-guides-responsive t)
-  (highlight-indent-guides-method 'character))
+;; (use-package highlight-indent-guides
+;;   :diminish
+;;   :hook
+;;   ((prog-mode yaml-mode) . highlight-indent-guides-mode)
+;;   :custom
+;;   (highlight-indent-guides-auto-enabled t)
+;;   (highlight-indent-guides-responsive t)
+;;   (highlight-indent-guides-method 'character))
 
 ;; ====================================================
 ;; Behavior settings
@@ -111,6 +111,8 @@
 ;; ====================================================
 
 (add-to-list 'initial-frame-alist '(font . "Menlo-12"))
+
+(use-package unicode-fonts)
 
 ;; nice fonts in OS X
 (setq mac-allow-anti-aliasing t)
