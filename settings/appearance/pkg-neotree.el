@@ -13,17 +13,21 @@
 
 ;; use neotree
 (use-package neotree
-    :init
-    (setq neo-theme (if (display-graphic-p) 'icons 'arrow)
-        projectile-switch-project-action 'neotree-projectile-action
+  :init
+  :config
+  (setq neo-autorefresh t
+        neo-theme (if (display-graphic-p) 'icons 'arrow)
         neo-window-width 40
         neo-show-hidden-files t
         neo-smart-open t
+        neo-confirm-create-file #'off-p
+        neo-confirm-create-directory #'off-p
         ;; Show information with a highlighting by color for file/directory name.
-        neo-vc-integration '(face)
         neo-vc-edited-face '(:foreground "#E2C08D")    ; Light yellew
         neo-vc-added-face  '(:foreground "SeaGreen4")  ; Light green
-        ))
+        neo-vc-integration '(face)
+        neo-window-fixed-size nil
+        projectile-switch-project-action 'neotree-projectile-action))
 
 (global-set-key [f8] 'neotree-toggle)
 
