@@ -19,14 +19,14 @@
 (setq custom-file (concat user-local-dir "custom.el"))
 (load custom-file t)
 
-;; ===================================================
+;; ===============================================================
 ;; Bootstrap Packages
-;; ===================================================
+;; ===============================================================
 (require 'packages)
 
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 ;; Appearance & Theme
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 (require 'theme)         ; Use Atom One Dark Theme
 (require 'editor)        ; Add .editorconfig
 (require 'workspaces)    ; Add windows/workspaces switching
@@ -38,16 +38,16 @@
 (require 'pkg-ivy)       ; Use Ivy completition backend
 (require 'pkg-flycheck)  ; Use Flycheck for spell checking
 
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 ;; Version Control System
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 (require 'pkg-magit)     ; Use Magit is an interface for Git
 (require 'mode-git)      ; Use various git config files
 (require 'pkg-projects)  ; Use Projects for VCS folders
 
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 ;; Languages and Frameworks
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 (require 'lang-php)      ; use PHP mode
 (require 'lang-web)      ; add support for web templates
 ;; (require 'lang-cpp)
@@ -59,10 +59,11 @@
 
 (require 'fw-php)        ; use Tools for any PHP framewors
 
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 ;; Tools
-;; ---------------------------------------------------
+;; ---------------------------------------------------------------
 (require 'docker-integration)  ; provide support for Docker
+(require 'shell-integration)   ; provide Shell configuration
 (require 'snippets)            ; provide Snippets support
 
 ;; Turn off mouse interface early in startup to avoid momentary display
