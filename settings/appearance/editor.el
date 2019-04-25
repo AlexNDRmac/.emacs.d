@@ -109,8 +109,9 @@
 ;;; ====================================================
 ;; Font setiings
 ;; ====================================================
-
-(add-to-list 'initial-frame-alist '(font . "Menlo-12"))
+;; Please, use Monospaced font with programming ligatures
+;; ex.: Fira Code, SourceCode Pro, DejaVue Sans Code, Monoid...
+(add-to-list 'initial-frame-alist '(font . "Fira Code-12"))
 
 (use-package unicode-fonts)
 
