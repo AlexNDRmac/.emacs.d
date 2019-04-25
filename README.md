@@ -13,12 +13,32 @@
 
 ## Configuration for Emacs 2.6.x
 
+This repository contains my GNU Emacs configuration.
+This configuration should be contains all necessary for comfortable working with PHP lang & frameworks / C, C++, C# / Java / Python / Shell / Zephir lang.
+
+Prerequisites
+-------------
+
+Ensure, that you already have [Fira Code](https://github.com/tonsky/FiraCode) font, or [install](https://github.com/tonsky/FiraCode/wiki) it.
+
 Download & installation
 -----------------------
 
 Emacs can be installed on MacOS using Homebrew.
 ```bash
 $ brew install emacs --with-cocoa
+```
+
+Next, just clone this repository...
+
+``` bash
+$ git clone https://github.com/AlexNDRmac/.emacs.d ~/.emacs.d
+```
+
+And... start using Emacs everyday!
+
+``` bash
+$ emacs
 ```
 
 License
