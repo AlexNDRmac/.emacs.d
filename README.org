@@ -1,0 +1,38 @@
+#+TITLE: Configuration for Emacs 2.6.x
+#+HTML_HEAD_EXTRA:
+[[https://img.shields.io/github/license/AlexNDRmac/.emacs.d.svg][LICENSE]] [[https://img.shields.io/github/languages/code-size/AlexNDRmac/.emacs.d.svg?style=flat-square][Code Size]] [[https://travis-ci.org/AlexNDRmac/.emacs.d.svg?branch=master&style=flat-square][Travis CI]] [[https://img.shields.io/github/languages/top/AlexNDRmac/.emacs.d.svg?style=flat-square][Language]]
+
+[[https://www.gnu.org/software/emacs/images/emacs.png][GNU Emacs]]
+
+This repository contains my GNU Emacs configuration.
+This configuration should be contains all necessary for comfortable working with PHP lang & frameworks / C, C++, C# / Java / Python / Shell / Zephir lang.
+
+Prerequisites
+-------------
+
+Ensure, that you already have [[https://github.com/tonsky/FiraCode][Fira Code]] font, or [[(https://github.com/tonsky/FiraCode/wiki][install]] it.
+
+Download & installation
+-----------------------
+
+Emacs can be installed on MacOS using Homebrew.
+#+BEGIN_SRC sh
+brew install emacs --with-cocoa
+#+END_SRC
+
+Next, just clone this repository...
+
+#+BEGIN_SRC sh
+git clone https://github.com/AlexNDRmac/.emacs.d ~/.emacs.d
+#+END_SRC
+
+And... start using Emacs everyday!
+
+#+BEGIN_SRC sh
+emacs
+#+END_SRC
+
+License
+-------
+
+This project is open source software licensed under the GNU General Public Licence version 3.
