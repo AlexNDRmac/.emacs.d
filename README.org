@@ -2,6 +2,7 @@
 [[https://img.shields.io/github/license/AlexNDRmac/.emacs.d.svg]] [[https://img.shields.io/github/languages/code-size/AlexNDRmac/.emacs.d.svg?style=flat-square]] [[https://travis-ci.org/AlexNDRmac/.emacs.d.svg?branch=master&style=flat-square]] [[https://img.shields.io/github/languages/top/AlexNDRmac/.emacs.d.svg?style=flat-square]] [[https://img.shields.io/badge/GNU%20Emacs-26.1-b48ead.svg?style=flat-square]]
 
 #+BEGIN_CENTER
+#+CAPTION: GNU Emacs Logo
 [[https://www.gnu.org/software/emacs/images/emacs.png]] \\
 * GNU Emacs
 #+END_CENTER
@@ -12,7 +13,7 @@ This configuration should be contains all necessary for comfortable working with
 Prerequisites
 -------------
 
-Ensure, that you already have [[Fira Code][https://github.com/tonsky/FiraCode]] font, or [[install][https://github.com/tonsky/FiraCode/wiki]] it.
+Ensure, that you already have [[https://github.com/tonsky/FiraCode][Fira Code]] font, or [[https://github.com/tonsky/FiraCode/wiki][install]] it.
 
 Download & installation
 -----------------------
