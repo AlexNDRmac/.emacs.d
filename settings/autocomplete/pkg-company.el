@@ -15,17 +15,17 @@
 
 ;; use Company
 (use-package company
+  :diminish (company-mode . " Ⓐ")
   :defer t
   :init
   (progn
-    (setq
-     company-tooltip-align-annotations t
-     company-tooltip-limit 9
-     company-echo-delay 0
-     company-idle-delay .15
-     company-minimum-prefix-length 3
-     company-show-numbers t
-     )))
+    (setq company-tooltip-align-annotations t
+          company-tooltip-limit 9
+          company-echo-delay 0
+          company-idle-delay .15
+          company-minimum-prefix-length 3
+          company-show-numbers t
+          )))
 
 ;; Bind Keys for Company
 (with-eval-after-load 'company
@@ -35,7 +35,7 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous)
   (define-key company-active-map (kbd "SPC") #'company-abort))
 
-;; Show Help modals with Company-Bix
+;; Show Help modals with Company-Box
 (use-package company-box
   :if (display-graphic-p)
   :after all-the-icons
