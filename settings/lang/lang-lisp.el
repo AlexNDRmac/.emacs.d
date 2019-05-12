@@ -17,13 +17,22 @@
     ielm-mode-hook)
   "Enable Autocomplete for these modes.")
 
+(defun remove-elc-on-save ()
+  "If you're saving an elisp file, it means that .elc is no longer valid."
+  (make-local-variable 'after-save-hook)
+  (add-hook 'after-save-hook
+            (lambda ()
+              (if (file-exists-p (concat buffer-file-name "c"))
+                  (delete-file (concat buffer-file-name "c"))))))
+
 ;; provides Lisp mode.
 (use-package elisp-mode
   ;; built-in package, do not ensure loading
   :ensure nil
   :init
   (dolist (hook my|lisp-modes)
-    (add-hook hook #'company-mode))
+    (add-hook hook #'company-mode)
+    (add-hook 'emacs-lisp-mode-hook 'remove-elc-on-save))
   :bind
   (:map emacs-lisp-mode-map
         ("C-c C-b" . #'eval-buffer)))
