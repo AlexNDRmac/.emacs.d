@@ -11,8 +11,12 @@
 
 ;;; Code:
 
+;; ==============================================================
+;; Core Settings
+;; ==============================================================
 ;; Base Configuration file used as Core Settings for Emacs
-(require 'core (concat user-emacs-directory "settings/core"))
+(require 'core (concat user-emacs-directory "settings/core/core"))
+(require 'core-backup)   ; Use custom backup settings
 
 ;; Set up the customize file to its own separate file,
 ;; instead of saving customize settings in init.el.
