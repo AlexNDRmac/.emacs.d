@@ -54,6 +54,7 @@
 ;; ---------------------------------------------------------------
 (require 'lang-php)      ; use PHP mode
 (require 'lang-web)      ; add support for web templates
+(require 'lang-js)       ; use js-mode with configuration
 ;; (require 'lang-cpp)
 ;; (require 'lang-csharp)
 (require 'lang-lisp)     ; use Lisp mode
