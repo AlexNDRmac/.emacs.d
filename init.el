@@ -71,11 +71,4 @@
 (require 'shell-integration)   ; provide Shell configuration
 (require 'snippets)            ; provide Snippets support
 
-;; Turn off mouse interface early in startup to avoid momentary display
-(when window-system
-  (menu-bar-mode -1)
-  (tool-bar-mode -1)
-  (scroll-bar-mode -1)
-  (tooltip-mode -1))
-
 ;;; init.el ends here
