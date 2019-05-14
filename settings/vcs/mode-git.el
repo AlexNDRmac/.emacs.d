@@ -44,6 +44,13 @@
 ;; Emacs integration for Github Codereview
 (use-package github-review)
 
+;; Use yagist for Gists
+(use-package yagist
+  :commands yagist-list
+  :init
+  (setq yagist-encrypt-risky-config t
+        yagist-git-config-with-includes t))
+
 ;; Support .gitignore files
 (use-package gitignore-mode
   :mode "\\.gitignore\\'"
