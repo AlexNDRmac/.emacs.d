@@ -34,6 +34,7 @@
 ;; ---------------------------------------------------------------
 (require 'theme)         ; Use Atom One Dark Theme
 (require 'editor)        ; Add .editorconfig
+(require 'conf-dired)    ; Use powered Dired configuration
 (require 'workspaces)    ; Add windows/workspaces switching
 (require 'modeline)      ; Add PowerLine
 (require 'pkg-whichkey)  ; Display Key Bindings everywhere
