@@ -41,9 +41,13 @@
 ;; @see https://github.com/sshaw/git-link
 (use-package git-link)
 
+;; Emacs integration for Github Codereview
+(use-package github-review)
+
 ;; Support .gitignore files
 (use-package gitignore-mode
   :mode "\\.gitignore\\'"
+  :mode "\\.gitignore_global\\'"
   :mode "\\.dockerignore\\'")
 
 ;; Support .gitattributes files
