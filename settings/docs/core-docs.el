@@ -17,7 +17,7 @@
 
 (use-package eldoc
   :ensure nil
-  :diminish
+  :diminish (eldoc-mode . " Ⓔ")
   :config
   (setq eldoc-idle-delay 0.5
         eldoc-minor-mode-string ""))
