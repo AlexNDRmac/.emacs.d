@@ -73,4 +73,9 @@
 (require 'shell-integration)   ; provide Shell configuration
 (require 'snippets)            ; provide Snippets support
 
+;; ---------------------------------------------------------------
+;; Documentation and Manuals
+;; ---------------------------------------------------------------
+(require 'core-docs)           ; Use ElDoc configuration
+
 ;;; init.el ends here
