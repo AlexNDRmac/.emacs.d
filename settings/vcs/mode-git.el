@@ -42,7 +42,9 @@
 (use-package git-link)
 
 ;; Emacs integration for Github Codereview
-(use-package github-review)
+(use-package github-review
+  :init
+  (setq github-review-fetch-top-level-and-review-comments t))
 
 ;; Use yagist for Gists
 (use-package yagist
