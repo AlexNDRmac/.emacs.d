@@ -41,4 +41,4 @@ License
 
 This project is open source software licensed under the GNU General Public Licence version 3.
 
-[[#Configuration for Emacs 2.6.x][▲ back to top]]
+[[#configuration-for-emacs-26x][▲ back to top]]
