@@ -11,6 +11,9 @@
 
 ;;; Code:
 
+;; Use All-the-icons for Neotree
+(use-package all-the-icons)
+
 ;; use neotree
 (use-package neotree
   :init

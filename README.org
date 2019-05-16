@@ -20,7 +20,8 @@ Download & installation
 
 Emacs can be installed on MacOS using Homebrew.
 #+BEGIN_SRC sh
-$ brew install emacs --with-cocoa
+$ brew install emacs-plus
+$ ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications
 #+END_SRC
 
 Next, just clone this repository...
@@ -39,3 +40,5 @@ License
 -------
 
 This project is open source software licensed under the GNU General Public Licence version 3.
+
+[[#Configuration for Emacs 2.6.x][▲ back to top]]
