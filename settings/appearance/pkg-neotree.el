@@ -12,7 +12,8 @@
 ;;; Code:
 
 ;; Use All-the-icons for Neotree
-(use-package all-the-icons)
+(use-package all-the-icons
+  :defer 0.5)
 
 ;; use neotree
 (use-package neotree

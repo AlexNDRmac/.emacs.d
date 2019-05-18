@@ -36,6 +36,7 @@
 (require 'editor)        ; Add .editorconfig
 (require 'conf-dired)    ; Use powered Dired configuration
 (require 'workspaces)    ; Add windows/workspaces switching
+(require 'conf-dashboard); Add Dashboard configuration
 (require 'modeline)      ; Add PowerLine
 (require 'pkg-whichkey)  ; Display Key Bindings everywhere
 (require 'pkg-neotree)   ; Use Neotree file explorer
