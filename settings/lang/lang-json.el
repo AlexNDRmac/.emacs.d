@@ -16,6 +16,7 @@
 ;;; Code:
 
 (use-package json-mode
+  :delight "J "
   :mode ("\\.json\\'" . json-mode))
 
 (add-hook 'json-mode-hook
