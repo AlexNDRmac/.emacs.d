@@ -14,9 +14,11 @@
 ;; Markdown mode
 ;; @see `https://leanpub.com/markdown-mode/read`
 (use-package markdown-mode
-  :mode "/README$"
-  :mode "\\.m\\(d\\|arkdown\\)$"
-  :mode ("/README\\.md$" . gfm-mode)
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'"         . gfm-mode)
+         ("CONTRIBUTING\\.md\\'"   . gfm-mode)
+         ("\\.m\\(d\\|arkdown\\)$" . markdown-mode))
+  :init (setq markdown-command "multimarkdown")
   :config
   (setq markdown-command "cmark"
         markdown-enable-wiki-links t
