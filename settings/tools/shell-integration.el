@@ -15,6 +15,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 ;; Set Shell execution command arguments
 ;; -l used to invoke login shells. It's required for reading `~/.profile` and `~/.bash_profile`
 ;; -c used to reading bash commands

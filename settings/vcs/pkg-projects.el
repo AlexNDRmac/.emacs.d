@@ -10,6 +10,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 ;; Use projects
 (use-package projectile
   :init
@@ -26,7 +30,7 @@
         '(".elc" ".pyc" ".o" ".lo" ".la" ".out" ".sock")
     )
   :config
-  (projectile-global-mode))
+  (projectile-mode))
 
 (provide 'pkg-projects)
 

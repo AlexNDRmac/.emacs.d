@@ -12,6 +12,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 (use-package yasnippet
   :diminish yas-minor-mode
   :config

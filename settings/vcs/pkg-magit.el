@@ -12,6 +12,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 ;; Taking inspiration from prefix keys and prefix arguments,
 ;; Transient implements a similar abstraction involving a prefix command, infix arguments and suffix commands.
 (use-package transient
