@@ -25,15 +25,16 @@
   :init
   (add-hook 'after-init-hook 'dashboard-refresh-buffer)
   (add-hook 'dashboard-mode-hook 'my/dashboard-banner)
-  :config
+  (dashboard-setup-startup-hook)
   :custom (dashboard-startup-banner 'logo 1)
-  :config (dashboard-setup-startup-hook))
-
-(setq dashboard-items '((recents  . 20)
-                        (bookmarks . 10)
-                        (projects . 5)
-                        (agenda . 5)
-                        (registers . 5)))
+  :config
+  (setq dashboard-set-heading-icons t
+        dashboard-set-file-icons t
+        dashboard-items '((recents   . 20)
+                          (bookmarks . 10)
+                          (projects  . 5)
+                          (agenda    . 5)
+                          (registers . 5))))
 
 (provide 'conf-dashboard)
 
