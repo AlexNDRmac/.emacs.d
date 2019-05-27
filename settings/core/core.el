@@ -102,7 +102,7 @@ This path also using for Bootstrap Packages.")
     tramp-auto-save-directory (concat user-cache-dir "tramp/"))
 
 ; make ibuffer default
-(defalias 'list-buffers 'ibuffer)
+;(defalias 'list-buffers 'ibuffer)
 
 ;; =======================================
 ;; General Settings

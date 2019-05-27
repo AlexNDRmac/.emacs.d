@@ -32,6 +32,7 @@
 ;; ---------------------------------------------------------------
 ;; Appearance & Theme
 ;; ---------------------------------------------------------------
+(require 'conf-ui)       ; Visual (UI) configuration
 (require 'theme)         ; Use Atom One Dark Theme
 (require 'editor)        ; Add .editorconfig
 (require 'conf-dired)    ; Use powered Dired configuration
@@ -40,6 +41,7 @@
 (require 'modeline)      ; Add PowerLine
 (require 'pkg-whichkey)  ; Display Key Bindings everywhere
 (require 'pkg-neotree)   ; Use Neotree file explorer
+(require 'pkg-ibuffer)   ; ibuffer configuration
 
 (require 'pkg-company)   ; Use Company for autocompele everything
 (require 'pkg-ivy)       ; Use Ivy completition backend
