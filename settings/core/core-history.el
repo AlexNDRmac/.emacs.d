@@ -15,6 +15,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 (require 'recentf)
 (recentf-mode 1)
 

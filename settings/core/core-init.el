@@ -1,4 +1,4 @@
-;;; core.el --- Main init file. -*- lexical-binding: t; -*-
+;;; core-init.el --- Core init file. -*- lexical-binding: t; -*-
 
 ;; This file is not part of GNU Emacs.
 ;;
@@ -22,48 +22,14 @@
 ;;   =...     an interactive command that starts an app module
 ;;   +...     any of the above but part of a module, e.g. `+emacs-lisp|init-hook'
 
-;;; ========================================
-;;; Set up global Variables and Const
-;;; ========================================
+;; Use Definitions
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
 
-(defconst emacs-debug-mode (or (getenv "DEBUG") init-file-debug)
-  "If non-nil, all Emacs will be verbose.
-Set DEBUG=1 in the command line or use --debug-init to enable this.")
-
-
-;;; ========================================
-;;; Set up Directories
-;;; ========================================
-
-(defvar user-emacs-dir (file-truename user-emacs-directory)
-  "The path to this emacs.d directory.
-The real path of this directory is found by chasing symbolic links
-both at the level of the file and at the level of the directories
-containing it, until no links are left at any level.")
-
-(defvar user-cache-dir (concat user-emacs-dir ".cache/")
-  "Directory for volatile storage.
-Use this for files that change often, like cache files.")
-
-(defvar user-local-dir (concat user-emacs-dir ".user/")
-  "Directory for User Specific files.
-Use this directory for permanent storage or sharing.")
-
-(defvar user-settings-dir (concat user-emacs-dir "settings/")
-  "All Settings and Customizatons for Emacs should located here.
-This path also using for Bootstrap Packages.")
-
-;; Add Mac OS bin $PATH to Emacs directory list
-(add-to-list 'exec-path "/usr/local/bin/")
-
-;; Add Settings path to Emacs directory list
-(add-to-list 'load-path user-settings-dir)
-
-;; Add nested Settings groups to the load path
-(dolist (settings-group (directory-files user-settings-dir t "\\w+"))
-  (when (file-directory-p settings-group)
-    (add-to-list 'load-path settings-group)))
-
+; Include other Cores' Configurations
+(require 'core-backup (concat user-emacs-directory "settings/core/core-backup.el"))
+(require 'core-history (concat user-emacs-directory "settings/core/core-history.el"))
 
 ;;; ========================================
 ;;; Encoding
@@ -132,5 +98,5 @@ This path also using for Bootstrap Packages.")
 ;; Set bash as default shell
 (setq shell-file-name "/bin/bash")
 
-(provide 'core)
-;;; core.el ends here
+(provide 'core-init)
+;;; core-init.el ends here

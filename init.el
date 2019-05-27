@@ -15,9 +15,7 @@
 ;; Core Settings
 ;; ==============================================================
 ;; Base Configuration file used as Core Settings for Emacs
-(require 'core (concat user-emacs-directory "settings/core/core"))
-(require 'core-backup)   ; Use custom backup settings
-(require 'core-history)  ; Use settings for history, recentf, etc...
+(require 'core-init (concat user-emacs-directory "settings/core/core-init"))
 
 ;; Set up the customize file to its own separate file,
 ;; instead of saving customize settings in init.el.

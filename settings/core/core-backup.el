@@ -18,7 +18,7 @@
 ;; Write all Backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name
-                 (concat user-emacs-dir "backups")))))
+                 (concat user-emacs-directory "backups")))))
 
 ;; Make backup files even in version controlled directories
 (setq vc-make-backup-files t)
