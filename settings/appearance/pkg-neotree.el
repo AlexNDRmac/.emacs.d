@@ -18,12 +18,13 @@
 ;; use neotree
 (use-package neotree
   :init
+  (defvar projectile-switch-project-action)
   :config
   (setq neo-autorefresh t
         neo-theme (if (display-graphic-p) 'icons 'arrow)
         neo-window-width 40
         neo-show-hidden-files t
-        neo-smart-open t
+        ;; neo-smart-open t
         neo-confirm-create-file #'off-p
         neo-confirm-create-directory #'off-p
         ;; Show information with a highlighting by color for file/directory name.
