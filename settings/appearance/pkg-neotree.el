@@ -20,11 +20,11 @@
   :init
   (defvar projectile-switch-project-action)
   :config
-  (setq neo-autorefresh t
+  (setq neo-autorefresh nil
         neo-theme (if (display-graphic-p) 'icons 'arrow)
         neo-window-width 40
         neo-show-hidden-files t
-        ;; neo-smart-open t
+        neo-smart-open nil
         neo-confirm-create-file #'off-p
         neo-confirm-create-directory #'off-p
         ;; Show information with a highlighting by color for file/directory name.
