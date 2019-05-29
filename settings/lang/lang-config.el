@@ -34,6 +34,12 @@
   :mode (("/nginx/sites-\\(?:available\\|enabled\\)/" . nginx-mode)
          ("nginx.conf" . nginx-mode)))
 
+(use-package apache-mode
+  :mode (("\\.htaccess\\'"   . apache-mode)
+	 ("httpd\\.conf\\'"  . apache-mode)
+	 ("srm\\.conf\\'"    . apache-mode)
+	 ("access\\.conf\\'" . apache-mode)))
+
 (add-to-list 'auto-mode-alist
              '("/config\\.\\(ac\\|in\\|m4\\)\\'" . autoconf-mode))
 
