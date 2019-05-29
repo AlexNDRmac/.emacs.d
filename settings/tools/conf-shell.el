@@ -1,4 +1,4 @@
-;;; shell-integration.el --- Shell configuration for GNU Emacs. -*- lexical-binding: t; -*-
+;;; conf-shell.el --- Shell configuration for GNU Emacs. -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2019 Oleksandr Andriiako <AlexNDR.mac@gmail.com>
 ;;
@@ -37,6 +37,6 @@
     :init
     (eshell-git-prompt-use-theme 'powerline)))
 
-(provide 'shell-integration)
+(provide 'conf-shell)
 
-;;; shell-integration.el ends here
+;;; conf-shell.el ends here

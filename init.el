@@ -72,8 +72,8 @@
 ;; ---------------------------------------------------------------
 ;; Tools
 ;; ---------------------------------------------------------------
-(require 'docker-integration)  ; provide support for Docker
-(require 'shell-integration)   ; provide Shell configuration
+(require 'conf-docker)  ; provide support for Docker
+(require 'conf-shell)   ; provide Shell configuration
 (require 'snippets)            ; provide Snippets support
 
 ;; ---------------------------------------------------------------

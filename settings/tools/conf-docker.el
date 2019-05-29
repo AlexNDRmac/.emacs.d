@@ -1,4 +1,4 @@
-;;; docker-integration.el --- Docker configuration for Emacs. -*- lexical-binding: t; -*-
+;;; conf-docker.el --- Docker configuration for Emacs. -*- lexical-binding: t; -*-
 
 ;; This file is not part of GNU Emacs.
 ;;
@@ -18,14 +18,14 @@
   (progn
     (use-package docker-tramp
       :defer t)
-    
+
     (use-package dockerfile-mode
       :mode "\\Dockerfile\\'")
-      
+
     (use-package docker-compose-mode
       :mode "docker-compose[^/]*\\.yml\\'")
       ))
 
-(provide 'docker-integration)
+(provide 'conf-docker)
 
-;;; docker-integration.el ends here
+;;; conf-docker.el ends here
