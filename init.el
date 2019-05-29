@@ -65,6 +65,7 @@
 (require 'lang-yaml)     ; highlight YML files
 (require 'lang-json)     ; add support for JSON format
 (require 'lang-md)       ; add Markdown support
+(require 'lang-config)   ; add support for various config langs
 
 (require 'fw-php)        ; use Tools for any PHP framewors
 
