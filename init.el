@@ -72,9 +72,10 @@
 ;; ---------------------------------------------------------------
 ;; Tools
 ;; ---------------------------------------------------------------
-(require 'conf-docker)  ; provide support for Docker
-(require 'conf-shell)   ; provide Shell configuration
-(require 'snippets)            ; provide Snippets support
+(require 'conf-docker)   ; provide support for Docker
+(require 'conf-shell)    ; provide Shell configuration
+(require 'conf-logs)     ; provide support for .log
+(require 'snippets)      ; provide Snippets support
 
 ;; ---------------------------------------------------------------
 ;; Documentation and Manuals
