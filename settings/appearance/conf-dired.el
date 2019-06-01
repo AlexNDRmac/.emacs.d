@@ -14,6 +14,7 @@
 ;; Customization for Emacs Dired
 
 ;;; Code:
+(defvar dired-mode-map)
 
 ;; Look up file contents in other window while browsing directory in Dired.
 (use-package peep-dired
@@ -39,6 +40,15 @@
               ([down-mouse-1] . dired-efap-click))
   :config
   (setq dired-efap-use-mouse t))
+
+(use-package dired
+  :ensure nil
+  :init
+  (setq dired-listing-switches "-alh"  ; show human readable sizes in dired
+        directory-free-space-args "-h" ; show human readable free space
+        dired-recursive-deletes 'always
+        dired-recursive-copies 'always
+        ))
 
 (provide 'conf-dired)
 
