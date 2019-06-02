@@ -13,6 +13,17 @@
 
 ;;; Code:
 
+;;; #include Core
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
+;;; #ifndef
+(defvar company-box-icons-elisp)
+(defvar company-box-icons-unknown)
+;;; #endif
+
+
 ;; use Company
 (use-package company
   :diminish (company-mode . " Ⓐ")
