@@ -15,6 +15,14 @@ Prerequisites
 
 Ensure, that you already have [[https://github.com/tonsky/FiraCode][Fira Code]] font, or [[https://github.com/tonsky/FiraCode/wiki][install]] it.
 
+If you using Mac OS X, you should be install *coreutils* (required for Dired to use "gls" intead of "ls")
+#+BEGIN_SRC sh
+$ brew install coreutils
+$
+$ which gls
+$ /usr/local/bin/gls
+#+END_SRC
+
 Download & installation
 -----------------------
 
