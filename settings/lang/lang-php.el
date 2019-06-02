@@ -12,6 +12,11 @@
 
 ;;; Code:
 
+;;; #include Core
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 ;; company completion source for php
 ;; @see `https://github.com/xcwen/ac-php'
 (use-package company-php
@@ -32,29 +37,37 @@
 
 (add-hook 'php-mode-hook
           '(lambda ()
-             ;; Enable auto-complete-mode
-             (auto-complete-mode t)
-
-               ;; Enable company-mode
+             ;; Enable company-mode
+             (company-mode t)
              (require 'company-php)
-               (company-mode t)
 
-             ;; As an example (optional)
-             (yas-global-mode 1)
+             ;; Enable ElDoc support (optional)
+             (ac-php-core-eldoc-setup)
 
-             ;; To enable eldoc support (optional)
-             (ac-php-core-eldoc-setup )
+             (set (make-local-variable 'company-backends)
+                  '((company-ac-php-backend company-dabbrev-code)
+                    company-capf company-files))
 
              ;; Jump to definition (optional)
-             (define-key php-mode-map (kbd "C-]")
+             (define-key php-mode-map (kbd "M-]")
                'ac-php-find-symbol-at-point)
 
              ;; Return back (optional)
-             (define-key php-mode-map (kbd "C-t")
-                 'ac-php-location-stack-back))
-           ;; PSR2
-           'php-enable-psr2-coding-style
-    )
+             (define-key php-mode-map (kbd "M-[")
+               'ac-php-location-stack-back))
+          ;; PSR2
+          'php-enable-psr2-coding-style)
+
+;;; Static Analyzers
+(use-package phan)
+
+;;; Debuggers
+(use-package geben
+  :defer t)
+
+;;; Unit Testing
+(use-package phpunit
+  :defer t)
 
 (provide 'lang-php)
 
