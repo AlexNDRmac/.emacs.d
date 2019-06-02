@@ -24,6 +24,22 @@
   "If non-nil, all Emacs will be verbose.
 Set DEBUG=1 in the command line or use --debug-init to enable this.")
 
+(defconst sys/linuxp
+  (eq system-type 'gnu/linux)
+  "Is it a GNU/Linux system?")
+
+(defconst sys/macp
+  (eq system-type 'darwin)
+  "Is it a Mac system?")
+
+(defconst sys/mac-x-p
+  (and (display-graphic-p) sys/macp)
+  "Is it a Mac system under X (GUI mode)?")
+
+(defconst sys/linux-x-p
+  (and (display-graphic-p) sys/linuxp)
+  "Is it a GNU/Linux system under X (GUI mode)?")
+
 ;;; ========================================
 ;;; Set up Directories
 ;;; ========================================
