@@ -12,7 +12,6 @@
 
 ;;; Code:
 
-;;; #include Core
 (eval-when-compile
   (require 'core-includes
            (concat user-emacs-directory "settings/core/core-includes.el")))

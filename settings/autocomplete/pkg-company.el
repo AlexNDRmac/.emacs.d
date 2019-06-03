@@ -23,7 +23,6 @@
 (defvar company-box-icons-unknown)
 ;;; #endif
 
-
 ;; use Company
 (use-package company
   :diminish (company-mode . " Ⓐ")
@@ -35,8 +34,7 @@
           company-echo-delay 0
           company-idle-delay .15
           company-minimum-prefix-length 3
-          company-show-numbers t
-          )))
+          company-show-numbers t)))
 
 ;; Bind Keys for Company
 (with-eval-after-load 'company

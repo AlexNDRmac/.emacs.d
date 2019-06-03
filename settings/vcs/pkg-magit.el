@@ -25,9 +25,9 @@
         transient-levels-file  (concat user-cache-dir "transient/levels.el")))
 
 ;;; Magit
-
+;;
 ;; For more see URL `https://magit.vc'
-
+;;
 ;; Load Magit Package
 (use-package magit
   :after transient

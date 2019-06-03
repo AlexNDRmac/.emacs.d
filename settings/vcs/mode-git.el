@@ -18,8 +18,7 @@
    '(git-gutter:modified-sign   "┃")
    '(git-gutter:added-sign      "┃")
    '(git-gutter:deleted-sign    "┃")
-   '(git-gutter:hide-gutter     nil)
-   ))
+   '(git-gutter:hide-gutter     nil)))
 
 (set-face-foreground 'git-gutter:modified "DeepSkyBlue3") ;; background color
 (set-face-foreground 'git-gutter:added "SeaGreen4")

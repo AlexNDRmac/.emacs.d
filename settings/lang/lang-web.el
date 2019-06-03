@@ -14,7 +14,7 @@
   :mode (("\\.phtml\\'"      . web-mode)
          ("\\.tpl\\'"        . web-mode)
          ("\\.tpl\\.php\\'"  . web-mode)
-         ("\\.blade\\.php\\'" . web-mode)
+         ("\\.blade\\.php\\'". web-mode)
          ("/\\(views\\|html\\|theme\\|templates\\)/.*\\.php\\'" . web-mode)
          ("\\.volt\\'"       . web-mode)
          ("\\.twig\\'"       . web-mode)
@@ -26,13 +26,12 @@
   ;; associate an engine
   (setq web-mode-engines-alist
         '(("php"   . "\\.phtml\\'")
-          ("blade" . "\\.blade\\."))))
-
-;; Indentation Level Settings
-(setq web-mode-markup-indent-offset 4 ; Html.
-      web-mode-code-indent-offset   4 ; javascript, php, etc...
-      web-mode-enable-comment-interpolation t ; highlight FIXME, TODO.. in comments
-    )
+          ("blade" . "\\.blade\\."))
+        ; Indentation Level Settings
+        web-mode-markup-indent-offset 4
+        web-mode-code-indent-offset 4
+        ; highlight FIXME, TODO.. in comments
+        web-mode-enable-comment-interpolation t))
 
 (provide 'lang-web)
 

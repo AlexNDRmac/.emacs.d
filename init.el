@@ -80,6 +80,6 @@
 ;; ---------------------------------------------------------------
 ;; Documentation and Manuals
 ;; ---------------------------------------------------------------
-(require 'core-docs)           ; Use ElDoc configuration
+(require 'core-docs)     ; Use ElDoc configuration
 
 ;;; init.el ends here

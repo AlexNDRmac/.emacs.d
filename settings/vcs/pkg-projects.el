@@ -27,8 +27,7 @@
     ;; Ignores
     projectile-globally-ignored-files '(".DS_Store" "Icon" "TAGS")
     projectile-globally-ignored-file-suffixes
-        '(".elc" ".pyc" ".o" ".lo" ".la" ".out" ".sock")
-    )
+        '(".elc" ".pyc" ".o" ".lo" ".la" ".out" ".sock"))
   :config
   (projectile-mode))
 

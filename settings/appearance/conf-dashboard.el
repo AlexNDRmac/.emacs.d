@@ -15,6 +15,12 @@
 
 ;;; Code:
 
+;;; #ifndef
+(defvar dashboard-banner-logo-title)
+(defvar dashboard-set-heading-icons)
+(defvar dashboard-set-file-icons)
+;;; #endif
+
 (defun my/dashboard-banner ()
   "Set a dashboard banner including information on package initialization time and garbage collections."
   (setq dashboard-banner-logo-title
