@@ -17,12 +17,9 @@
 
 (use-package json-mode
   :delight "J "
-  :mode ("\\.json\\'" . json-mode))
-
-(add-hook 'json-mode-hook
-          (lambda ()
-            (make-local-variable 'js-indent-level)
-            (setq js-indent-level 2)))
+  :mode ("\\.json\\'" . json-mode)
+  :config
+  (setq js-indent-level 2))
 
 (use-package json-reformat
   :after json-mode
