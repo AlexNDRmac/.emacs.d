@@ -67,7 +67,7 @@
 (require 'lang-md)       ; add Markdown support
 (require 'lang-config)   ; add support for various config langs
 
-(require 'fw-php)        ; use Tools for any PHP framewors
+(require 'fw-php)        ; use Tools for any PHP frameworks
 
 ;; ---------------------------------------------------------------
 ;; Tools

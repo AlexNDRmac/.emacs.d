@@ -16,6 +16,10 @@
   (require 'core-includes
            (concat user-emacs-directory "settings/core/core-includes.el")))
 
+;;; #ifndef
+(defvar flycheck-phpcs-standard)
+;;; #enif
+
 ;; company completion source for php
 ;; @see `https://github.com/xcwen/ac-php'
 (use-package company-php
@@ -32,7 +36,9 @@
 (use-package php-mode
     :after company-php
     :mode "\\.php[ts354]?\\'"
-    :mode "\\.inc\\'")
+    :mode "\\.inc\\'"
+    :init
+    (setq flycheck-phpcs-standard "PSR2"))
 
 (add-hook 'php-mode-hook
           '(lambda ()
@@ -55,7 +61,7 @@
              (define-key php-mode-map (kbd "M-[")
                'ac-php-location-stack-back))
           ;; PSR2
-          'php-enable-psr2-coding-style)
+          (php-enable-psr2-coding-style))
 
 ;;; Static Analyzers
 (use-package phan)
