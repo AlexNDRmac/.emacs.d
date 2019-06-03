@@ -18,7 +18,7 @@
 
 ;;; #ifndef
 (defvar flycheck-phpcs-standard)
-;;; #enif
+;;; #endif
 
 ;; company completion source for php
 ;; @see `https://github.com/xcwen/ac-php'
@@ -61,7 +61,7 @@
              (define-key php-mode-map (kbd "M-[")
                'ac-php-location-stack-back))
           ;; PSR2
-          (php-enable-psr2-coding-style))
+          'php-enable-psr2-coding-style)
 
 ;;; Static Analyzers
 (use-package phan)
