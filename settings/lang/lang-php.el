@@ -18,7 +18,32 @@
 
 ;;; #ifndef
 (defvar flycheck-phpcs-standard)
+(defvar company-backends)
+(defvar php-mode-map)
 ;;; #endif
+
+(defun init/php-mode-hook()
+  "Configure PHP mode."
+  (company-mode t) ; Enable Company
+  (require 'company-php)
+  (ac-php-core-eldoc-setup)
+
+  (make-local-variable 'company-backends)
+  (add-to-list 'company-backends '(company-ac-php-backend
+                                   company-capf
+                                   company-files
+                                   company-dabbrev-code))
+
+  ;; Jump to definition (optional)
+  (define-key php-mode-map (kbd "M-]")
+    'ac-php-find-symbol-at-point)
+
+  ;; Return back (optional)
+  (define-key php-mode-map (kbd "M-[")
+    'ac-php-location-stack-back)
+  ;; PSR2
+  'php-enable-psr2-coding-style)
+
 
 ;; company completion source for php
 ;; @see `https://github.com/xcwen/ac-php'
@@ -38,30 +63,9 @@
     :mode "\\.php[ts354]?\\'"
     :mode "\\.inc\\'"
     :init
+    (add-hook 'php-mode-hook #'init/php-mode-hook)
     (setq flycheck-phpcs-standard "PSR2"))
 
-(add-hook 'php-mode-hook
-          '(lambda ()
-             ;; Enable company-mode
-             (company-mode t)
-             (require 'company-php)
-
-             ;; Enable ElDoc support (optional)
-             (ac-php-core-eldoc-setup)
-
-             (set (make-local-variable 'company-backends)
-                  '((company-ac-php-backend company-dabbrev-code)
-                    company-capf company-files))
-
-             ;; Jump to definition (optional)
-             (define-key php-mode-map (kbd "M-]")
-               'ac-php-find-symbol-at-point)
-
-             ;; Return back (optional)
-             (define-key php-mode-map (kbd "M-[")
-               'ac-php-location-stack-back))
-          ;; PSR2
-          'php-enable-psr2-coding-style)
 
 ;;; Static Analyzers
 (use-package phan)
