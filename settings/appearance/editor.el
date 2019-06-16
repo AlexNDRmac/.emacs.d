@@ -10,6 +10,10 @@
 
 ;;; Code:
 
+(eval-when-compile
+  (require 'core-includes
+           (concat user-emacs-directory "settings/core/core-includes.el")))
+
 ;; Support `.editorconfig` files
 ;; If you use global `.editorconfig` file, you should remove
 ;; `indent_size` from general rule
@@ -114,12 +118,16 @@
 
 ;; Use Multiple Cursor for Selection mode
 (use-package multiple-cursors
-  :ensure t
-  :bind (("M-." . mc/mark-next-like-this)
-         ("M-," . mc/unmark-next-like-this)
-         ("C-M-<mouse-1>" . mc/add-cursor-on-click)))
-
- (setq mc/list-file (concat user-cache-dir ".mc-lists.el"))
+  :bind (("C-S-c C-S-c"   . mc/edit-lines)
+         ("C->"           . mc/mark-next-like-this)
+         ("C-<"           . mc/mark-previous-like-this)
+         ("C-c C-<"       . mc/mark-all-like-this)
+         ("C-M->"         . mc/skip-to-next-like-this)
+         ("C-M-<"         . mc/skip-to-previous-like-this)
+         ("s-<mouse-1>"   . mc/add-cursor-on-click)
+         ("C-S-<mouse-1>" . mc/add-cursor-on-click))
+  :config
+  (setq mc/list-file (concat user-cache-dir ".mc-lists.el")))
 
 (provide 'editor)
 ;;; editor.el ends here
