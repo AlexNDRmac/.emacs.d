@@ -129,5 +129,15 @@
   :config
   (setq mc/list-file (concat user-cache-dir ".mc-lists.el")))
 
+;; Use Rainbow-Mode
+(use-package rainbow-mode
+  :hook (((after-init
+           text-mode
+           org-mode
+           css-mode
+           html-mode
+           prog-mode). rainbow-mode))
+  :diminish rainbow-mode)
+
 (provide 'editor)
 ;;; editor.el ends here
