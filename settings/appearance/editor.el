@@ -119,5 +119,7 @@
          ("M-," . mc/unmark-next-like-this)
          ("C-M-<mouse-1>" . mc/add-cursor-on-click)))
 
+ (setq mc/list-file (concat user-cache-dir ".mc-lists.el"))
+
 (provide 'editor)
 ;;; editor.el ends here
