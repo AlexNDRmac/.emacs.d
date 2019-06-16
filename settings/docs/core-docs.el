@@ -22,6 +22,10 @@
   (setq eldoc-idle-delay 0.5
         eldoc-minor-mode-string ""))
 
+;; A better *Help* buffer
+(use-package helpful
+  :bind (("C-c C-d" . helpful-at-point)))
+
 (provide 'core-docs)
 
 ;;; core-docs.el ends here
