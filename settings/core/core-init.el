@@ -67,6 +67,15 @@
     ;; to local common Dir
     tramp-auto-save-directory (concat user-cache-dir "tramp/"))
 
+;; Provide common configuration directories
+;; for bookmarks, url, tramp...
+(setq bookmark-default-file (concat user-cache-dir "bookmarks")
+      ;; save after every change
+      bookmark-save-flag 1
+      url-configuration-directory (concat user-cache-dir "url")
+      eshell-directory-name (concat user-cache-dir "eshell" )
+      tramp-persistency-file-name (concat user-cache-dir "tramp"))
+
 ; make ibuffer default
 ;(defalias 'list-buffers 'ibuffer)
 
