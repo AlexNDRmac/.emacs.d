@@ -21,3 +21,6 @@
 (provide 'pkg-whichkey)
 
 ;;; pkg-whichkey.el ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:

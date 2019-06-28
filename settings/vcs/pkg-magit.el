@@ -47,3 +47,6 @@
 (provide 'pkg-magit)
 
 ;;; pkg-magit.el ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:

@@ -40,3 +40,6 @@
 (provide 'pkg-ibuffer)
 
 ;;; pkg-ibuffer.el ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:

@@ -29,3 +29,6 @@
 (provide 'core-docs)
 
 ;;; core-docs.el ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:

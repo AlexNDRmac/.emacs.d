@@ -30,3 +30,6 @@
 (provide 'lang-json)
 
 ;;; lang-json.el ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:

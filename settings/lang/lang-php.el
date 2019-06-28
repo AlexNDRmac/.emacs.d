@@ -81,3 +81,6 @@
 (provide 'lang-php)
 
 ;;; lang-php.el ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:

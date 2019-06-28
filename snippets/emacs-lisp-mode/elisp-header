@@ -23,3 +23,6 @@ $0
 (provide '${7:`(f-base (buffer-file-name))`})
 
 ;;; `(f-filename (buffer-file-name))` ends here
+;; Local Variables:
+;; byte-compile-warnings: (not free-vars unresolved)
+;; End:
