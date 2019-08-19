@@ -23,12 +23,12 @@
 (recentf-mode 1)
 
 (setq recentf-save-file (concat user-cache-dir "recentf")
-        recentf-max-saved-items 50
-        recentf-max-menu-items 25
-        ;; disable recentf-cleanup on Emacs start, because it can cause
-        ;; problems with remote files
-        recentf-auto-cleanup 'never
-        recentf-menu-title "Recent Files")
+      recentf-max-saved-items 50
+      recentf-max-menu-items 25
+      ;; disable recentf-cleanup on Emacs start, because it can cause
+      ;; problems with remote files
+      recentf-auto-cleanup 'never
+      recentf-menu-title "Recent Files")
 
 (add-to-list 'recentf-exclude ".cache")
 (add-to-list 'recentf-exclude ".cask")
