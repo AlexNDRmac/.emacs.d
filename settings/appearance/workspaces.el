@@ -24,6 +24,17 @@
   (scroll-bar-mode -1)
   (tooltip-mode -1))
 
+;; save/restore opened files and windows config
+(use-package desktop
+  :config
+  (setq desktop-dirname user-cache-dir
+        desktop-path (list user-cache-dir)
+        desktop-missing-file-warning nil
+        desktop-load-locked-desktop t
+        desktop-save t
+        desktop-save-mode t))
+(desktop-read)
+
 (provide 'workspaces)
 
 ;;; workspaces.el ends here
