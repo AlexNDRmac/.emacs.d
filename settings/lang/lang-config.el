@@ -43,6 +43,9 @@
 (add-to-list 'auto-mode-alist
              '("/config\\.\\(ac\\|in\\|m4\\)\\'" . autoconf-mode))
 
+(use-package conf-mode
+  :mode ("\\.*rc$" . conf-unix-mode))
+
 (provide 'lang-config)
 
 ;;; lang-config.el ends here
