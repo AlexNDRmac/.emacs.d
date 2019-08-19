@@ -16,10 +16,16 @@
 ;;; Code:
 ;; Simple Compile command bundled with my Emacs
 (defun my/compile-file-with-gcc ()
-  "Compiles the file with GCC."
+  "Compiles the file with gcc."
   (interactive)
   (compile
    (concat "gcc " (buffer-file-name) " -o " (file-name-sans-extension buffer-file-name) ".out")))
+
+(defun my/compile-file-with-cpp ()
+  "Compiles the file with g++."
+  (interactive)
+  (compile
+   (concat "g++ " (buffer-file-name) " -o " (file-name-sans-extension buffer-file-name) ".o")))
 
 
 (use-package company-c-headers
