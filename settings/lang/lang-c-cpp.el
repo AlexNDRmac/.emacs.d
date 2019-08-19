@@ -14,6 +14,13 @@
 ;;
 
 ;;; Code:
+;; Simple Compile command bundled with my Emacs
+(defun my/compile-file-with-gcc ()
+  "Compiles the file with GCC."
+  (interactive)
+  (compile
+   (concat "gcc " (buffer-file-name) " -o " (file-name-sans-extension buffer-file-name) ".out")))
+
 
 (use-package company-c-headers
   :init
