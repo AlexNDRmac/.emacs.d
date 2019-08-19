@@ -46,10 +46,14 @@
   (setq github-review-fetch-top-level-and-review-comments t))
 
 ;; Use yagist for Gists
+(use-package kaesar)
 (use-package yagist
+  :requires kaesar
   :commands yagist-list
   :init
+  (add-hook 'prog-mode-hook #'yagist-global-minor-mode)
   (setq yagist-encrypt-risky-config t
+        yagist-view-gist t
         yagist-git-config-with-includes t))
 
 ;; Support .gitignore files
