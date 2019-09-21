@@ -32,14 +32,29 @@
   :init
   (add-to-list 'company-backends 'company-c-headers))
 
+;; Major mode for C family languages
+(use-package cc-mode)
+;; google's c/c++ style for c-mode
+(use-package google-c-style)
+
 ;; Autoformatter for code style
 (use-package clang-format
+  :after cc-mode
   :config
   (setq clang-format-style "google"))
 
 (use-package flycheck-clang-analyzer
   :after flycheck
   :config (flycheck-clang-analyzer-setup))
+
+;; Semantic -- The core	C++ editing
+(use-package semantic
+  :disabled t
+  :config
+  (global-semanticdb-minor-mode t)
+  (global-semantic-idle-scheduler-mode t)
+  (global-semantic-idle-summary-mode nil)
+  (semantic-mode t))
 
 (provide 'lang-c-cpp)
 
