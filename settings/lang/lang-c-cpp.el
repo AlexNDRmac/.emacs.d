@@ -32,6 +32,15 @@
   :init
   (add-to-list 'company-backends 'company-c-headers))
 
+;; Autoformatter for code style
+(use-package clang-format
+  :config
+  (setq clang-format-style "google"))
+
+(use-package flycheck-clang-analyzer
+  :after flycheck
+  :config (flycheck-clang-analyzer-setup))
+
 (provide 'lang-c-cpp)
 
 ;;; lang-c-cpp.el ends here
