@@ -1,6 +1,6 @@
-language: emacs-lisp
+dist: bionic
 
-dist: xenial
+language: generic
 
 cache:
   apt: true
