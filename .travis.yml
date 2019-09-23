@@ -4,6 +4,7 @@ cache:
   apt: true
   timeout: 604800
   directories:
+    # Cache stable Emacs binaries (saves 1min per job)
     - "$HOME/emacs"
     - ".cask/"
     - "$HOME/.emacs.d/.cask"
@@ -28,6 +29,8 @@ env:
     - PATH="$HOME/bin:$HOME/.cask/bin:$HOME/.evm/bin:$PATH"
 
 before_install:
+  - sudo apt-get update
+  - sudo apt-get update gnutls-bin
   - git clone -q --depth=1 https://github.com/rejeep/evm.git $HOME/.evm
   - evm config path /tmp
 
