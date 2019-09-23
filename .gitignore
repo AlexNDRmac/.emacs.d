@@ -1,6 +1,3 @@
-# Cache folders persisted to Workspace
-.cache
-
 # Packages installed for development
 .cask
 
