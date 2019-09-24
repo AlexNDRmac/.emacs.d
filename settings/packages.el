@@ -26,7 +26,8 @@
       '(("org"          . "http://orgmode.org/elpa/")
         ("melpa"        . "http://melpa.org/packages/")
         ("melpa-stable" . "http://stable.melpa.org/packages/")
-        ("gnu"          . "https://elpa.gnu.org/packages/")))
+        ;; ("gnu"          . "https://elpa.gnu.org/packages/")
+        ))
 
 ;; Priorities. Default priority is 0.
 (setq package-archive-priorities
