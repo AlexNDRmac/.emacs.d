@@ -1,0 +1,42 @@
+name: build
+
+on: push
+
+jobs:
+  build:
+    runs-on: macOS-latest
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        emacs-version:
+          - '26.1'
+          - '26.2'
+          - '26.3'
+          - 'snapshot'
+        include:
+          - emacs-version: snapshot
+            allow_failure: true
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Setup GNU Emacs
+        uses: purcell/setup-emacs@master
+        with:
+          version: ${{ matrix:emacs-version }}
+
+      - name: Run tests
+        if: matrix.allow_failure != true
+        run: ln -s $GITHUB_WORKSPACE $HOME/.emacs.d && ./run-tests.sh --debug
+
+      - name: Run tests (snapshot)
+        if: matrix.allow_failure == true
+        run: ln -s $GITHUB_WORKSPACE $HOME/.emacs.d && (./run-tests.sh --debug || true)
+
+      - name: Run Shell script analyzis tool
+        run: shellcheck ./run-tests.sh
