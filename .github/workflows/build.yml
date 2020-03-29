@@ -1,9 +1,9 @@
-name: Emacs
+name: build
 
 on: push
 
 jobs:
-  build:
+  Emacs-Build:
     runs-on: macOS-latest
 
     strategy:

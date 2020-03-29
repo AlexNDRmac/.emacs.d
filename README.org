@@ -1,5 +1,5 @@
 #+TITLE: Configuration for Emacs 2.6.x
-[[https://img.shields.io/github/license/AlexNDRmac/.emacs.d.svg]] [[https://img.shields.io/github/languages/code-size/AlexNDRmac/.emacs.d.svg?style=flat-square]] [[https://travis-ci.org/AlexNDRmac/.emacs.d][https://travis-ci.org/AlexNDRmac/.emacs.d.svg?branch=master&style=flat-square]] [[https://img.shields.io/github/languages/top/AlexNDRmac/.emacs.d.svg?style=flat-square]] [[https://img.shields.io/badge/GNU%20Emacs-26.2-b48ead.svg?style=flat-square]]
+[[https://github.com/AlexNDRmac/.emacs.d/actions][https://github.com/AlexNDRmac/.emacs.d/workflows/build/badge.svg?branch=master&style=flat-square]] [[https://img.shields.io/github/languages/top/AlexNDRmac/.emacs.d.svg?style=flat-square]] [[https://img.shields.io/badge/GNU%20Emacs-26.2-b48ead.svg?style=flat-square]]
 
 #+BEGIN_CENTER
 #+CAPTION: GNU Emacs Logo
