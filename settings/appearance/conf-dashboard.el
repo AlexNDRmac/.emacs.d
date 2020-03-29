@@ -28,6 +28,7 @@
                 (float-time (time-subtract after-init-time before-init-time)) gcs-done)))
 
 (use-package dashboard
+  :if (< (length command-line-args) 2)
   :init
   (add-hook 'after-init-hook 'dashboard-refresh-buffer)
   (add-hook 'dashboard-mode-hook 'my/dashboard-banner)
