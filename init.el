@@ -62,6 +62,7 @@
 ;; (require 'lang-csharp)
 (require 'lang-lisp)     ; use Lisp mode
 ;; (require 'lang-java)
+(require 'lang-zephir)   ; support for Zephir lang
 (require 'lang-yaml)     ; highlight YML files
 (require 'lang-json)     ; add support for JSON format
 (require 'lang-md)       ; add Markdown support

@@ -23,10 +23,10 @@
     package-user-dir (concat user-local-dir "vendor/" emacs-version "/elpa"))
 
 (setq package-archives
-      '(("org"          . "http://orgmode.org/elpa/")
-        ("melpa"        . "http://melpa.org/packages/")
-        ("melpa-stable" . "http://stable.melpa.org/packages/")
-        ;; ("gnu"          . "https://elpa.gnu.org/packages/")
+      '(("melpa"        . "https://melpa.org/packages/")
+        ("melpa-stable" . "https://stable.melpa.org/packages/")
+        ("gnu"          . "https://elpa.gnu.org/packages/")
+        ("org"          . "http://orgmode.org/elpa/")
         ))
 
 ;; Priorities. Default priority is 0.
