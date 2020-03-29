@@ -39,4 +39,8 @@ jobs:
         run: ln -s $GITHUB_WORKSPACE $HOME/.emacs.d && (./run-tests.sh --debug || true)
 
       - name: Run Shell script analyzis tool
-        run: shellcheck ./run-tests.sh
+        uses: reviewdog/action-shellcheck@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          path: "./run-tests.sh"
+
