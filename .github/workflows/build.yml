@@ -28,7 +28,7 @@ jobs:
       - name: Setup GNU Emacs
         uses: purcell/setup-emacs@master
         with:
-          version: ${{ matrix:emacs-version }}
+          version: ${{ matrix.emacs-version }}
 
       - name: Run tests
         if: matrix.allow_failure != true
