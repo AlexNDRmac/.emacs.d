@@ -107,6 +107,10 @@
 ;; Set bash as default shell
 (setq shell-file-name "/bin/bash")
 
+;; Add the path into the emacs environment and its exec path
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
 (provide 'core-init)
 ;;; core-init.el ends here
 ;; Local Variables:
