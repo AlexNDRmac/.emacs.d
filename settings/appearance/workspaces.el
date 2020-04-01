@@ -33,7 +33,7 @@
         desktop-load-locked-desktop t
         desktop-save t
         desktop-save-mode t))
-(desktop-read)
+;; (desktop-read)
 
 (provide 'workspaces)
 
