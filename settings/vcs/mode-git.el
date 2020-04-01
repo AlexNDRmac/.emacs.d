@@ -9,23 +9,17 @@
 ;;; Code:
 
 ;; It highlights changes and the type of them in opened files
-(use-package git-gutter
+;; @see https://github.com/dgutov/diff-hl
+(use-package diff-hl
+  :hook
+  ((dired-mode . diff-hl-dired-mode)
+   (after-init . global-diff-hl-mode)
+   (vc-dir-mode . turn-on-diff-hl-mode)
+   (magit-post-refresh . diff-hl-magit-post-refresh))
   :config
-  ;; use git-gutter for files in git repository.
-  (global-git-gutter-mode +1)
-  (custom-set-variables
-   '(git-gutter:update-interval 2)
-   '(git-gutter:modified-sign   "┃")
-   '(git-gutter:added-sign      "┃")
-   '(git-gutter:deleted-sign    "┃")
-   '(git-gutter:hide-gutter     nil)))
-
-(set-face-foreground 'git-gutter:modified "DeepSkyBlue3") ;; background color
-(set-face-foreground 'git-gutter:added "SeaGreen4")
-(set-face-foreground 'git-gutter:deleted "IndianRed3")
-
-;; diff information is updated at hooks
-(add-to-list 'git-gutter:update-hooks 'focus-in-hook)
+  (if (display-graphic-p)
+      (diff-hl-flydiff-mode t)
+    (diff-hl-margin-mode t)))
 
 ;; Provides a configured helm to generate `.gitignore` files using gitignore.io
 (use-package helm-gitignore)
