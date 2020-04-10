@@ -18,9 +18,8 @@
   :mode (("README\\.md\\'"         . gfm-mode)
          ("CONTRIBUTING\\.md\\'"   . gfm-mode)
          ("\\.m\\(d\\|arkdown\\)$" . markdown-mode))
-  :init (setq markdown-command "multimarkdown")
   :config
-  (setq markdown-command "cmark"
+  (setq markdown-command "pandoc"
         markdown-enable-wiki-links t
         markdown-enable-math t
         markdown-italic-underscore t
