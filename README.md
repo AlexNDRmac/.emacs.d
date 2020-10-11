@@ -1,4 +1,4 @@
-# Configuration for Emacs 2.6.x
+# Configuration for Emacs 2.7.x
 
 [![Build Status][actions badge]][actions link]
 
