@@ -1,4 +1,4 @@
-# Configuration for Emacs 2.7.x
+# Configuration for Emacs 2.8.x
 
 [![Build Status][actions badge]][actions link]
 
@@ -23,8 +23,10 @@ which gls
 Emacs can be installed on MacOS using Homebrew.
 
 ```sh
-brew install emacs-plus
-ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications
+brew tap daviderestivo/emacs-head
+brew install emacs-head --HEAD --with-cocoa
+
+ln -sfv /usr/local/opt/emacs-head@28/Emacs.app /Applications
 ```
 
 Next, just clone this repository...
