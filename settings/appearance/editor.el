@@ -105,7 +105,16 @@
 ;; ====================================================
 ;; Please, use Monospaced font with programming ligatures
 ;; ex.: Fira Code, SourceCode Pro, DejaVue Sans Code, Monoid...
-(add-to-list 'initial-frame-alist '(font . "Fira Code-12"))
+(defvar font-face nil)
+(defvar font-size 12)
+(cond ((member "JetBrains Mono" (font-family-list))
+       (setq font-face (concat "JetBrains Mono-"
+                               (number-to-string font-size)
+                               ":hintstyle=hintfull"))))
+
+(when font-face
+  (add-to-list 'initial-frame-alist `(font . ,font-face))
+  (add-to-list 'default-frame-alist `(font . ,font-face)))
 
 (use-package unicode-fonts)
 
