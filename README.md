@@ -24,7 +24,7 @@ Emacs can be installed on MacOS using Homebrew.
 
 ```sh
 brew tap daviderestivo/emacs-head
-brew install emacs-head --HEAD --with-cocoa
+brew install emacs-head@28 --with-cocoa
 
 ln -sfv /usr/local/opt/emacs-head@28/Emacs.app /Applications
 ```
