@@ -35,6 +35,14 @@ Next, just clone this repository...
 git clone https://github.com/AlexNDRmac/.emacs.d ~/.emacs.d
 ```
 
+### Fonts
+
+In order for the icons to work (for NeoTree package) it is very important that you install the [Resource Fonts][all-the-icons link] from *all-the-icons* package:
+
+```
+M-x all-the-icons-install-fonts
+```
+
 And... start using Emacs everyday!
 
 ```sh
@@ -51,3 +59,4 @@ This project is open source software licensed under the GNU General Public Licen
 [actions link]: https://github.com/AlexNDRmac/.emacs.d/actions
 [font link]: https://github.com/tonsky/FiraCode
 [font wiki]: https://github.com/tonsky/FiraCode/wiki
+[all-the-icons link] https://github.com/domtronn/all-the-icons.el#installing-fonts
