@@ -59,4 +59,4 @@ This project is open source software licensed under the GNU General Public Licen
 [actions link]: https://github.com/AlexNDRmac/.emacs.d/actions
 [font link]: https://github.com/tonsky/FiraCode
 [font wiki]: https://github.com/tonsky/FiraCode/wiki
-[all-the-icons link] https://github.com/domtronn/all-the-icons.el#installing-fonts
+[all-the-icons link]: https://github.com/domtronn/all-the-icons.el#installing-fonts
